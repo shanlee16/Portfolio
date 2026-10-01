@@ -1,0 +1,14 @@
+# Line endings and binary handling, pinned so the deployed site is byte-stable
+# no matter whose machine or Git version touches the files.
+
+# Text files: store with LF in the repository, check out as-is.
+* text=auto eol=lf
+
+# Binaries: never touched, never line-ending converted. Getting this wrong
+# would corrupt an image, and a corrupted image fails silently in a browser.
+*.png   binary
+*.jpg   binary
+*.webp  binary
+*.pdf   binary
+*.woff2 binary
+*.ico   binary

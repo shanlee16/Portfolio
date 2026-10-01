@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth [scroll-padding-top:calc(var(--nav-h,4.25rem)+0.5rem)]">
+<head>
+    <meta charset="UTF-8">
+
+    
+    <script>document.documentElement.classList.add('js')</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Shan Lee Garmino | BSIT Student</title>
+    <meta name="description" content="Portfolio of Shan Lee Garmino - 3rd-year BS Information Technology student and UI/UX design student from the Philippines.">
+    <meta name="author" content="Shan Lee Garmino">
+    <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shan Lee Garmino",
+      "jobTitle": "BS Information Technology Student",
+      "description": "Third-year BS Information Technology student and UI/UX design student from Dasmarinas, Cavite, Philippines. Builds websites and mobile app designs.",
+      "email": "mailto:shanleegarmino@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dasmarinas",
+        "addressRegion": "Cavite",
+        "addressCountry": "PH"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "National College of Science and Technology"
+      },
+      "knowsAbout": [
+        "HTML", "CSS", "JavaScript", "PHP", "UI/UX Design", "Figma"
+      ]
+    }
+    </script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    
+
+    
+    <link rel="preload" as="style" href="tailwind.css">
+    <link rel="preload" as="image" href="images/profile.webp" type="image/webp" fetchpriority="high">
+
+    
+    <link rel="preload" as="font" type="font/woff2" href="fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+
+    
+
+    
+
+    
+    
+    <script>
+        (function () {
+            var proto = window.SVGElement && SVGElement.prototype;
+            if (!proto) return;
+            var desc = Object.getOwnPropertyDescriptor(proto, "className");
+            if (desc && !desc.configurable) return;
+            Object.defineProperty(proto, "className", {
+                configurable: true,
+                enumerable: true,
+                get: function () { return this.getAttribute("class") || ""; },
+                set: function (v) { this.setAttribute("class", v); }
+            });
+        })();
+    </script>
+    <script src="vendor/taos.js" defer></script>
+
+    
+    
+    <link rel="preload" as="script" href="vendor/vue.global.prod.js">
+
+    
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && systemDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <style>
+        
+
+        @font-face {
+            font-family: 'Plus Jakarta Sans';
+            font-style: normal;
+            font-weight: 400 800;
+            font-display: swap;
+            src: url('fonts/plus-jakarta-sans-latin.woff2') format('woff2');
+            
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                           U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+                           U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+                           U+FFFD;
+        }
+
+        
+        [v-cloak] { display: none; }
+
+        
+        :root { --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1); }
+
+        
+
+        
+        .chat-enter-from   { opacity: 0; transform: translateY(12px) scale(0.95); }
+        .chat-enter-active { transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth); }
+        .chat-leave-to     { opacity: 0; transform: translateY(8px) scale(0.96); }
+        .chat-leave-active { transition: opacity 0.25s var(--ease-smooth), transform 0.25s var(--ease-smooth); }
+
+        
+        .modal-enter-from,
+        .modal-leave-to { opacity: 0; }
+        .modal-enter-active { transition: opacity 0.3s var(--ease-smooth); }
+        .modal-leave-active { transition: opacity 0.2s var(--ease-smooth); }
+
+        
+        .modalcard-enter-from,
+        .modalcard-leave-to { opacity: 0; }
+        .modalcard-enter-active { transition: opacity 0.3s var(--ease-smooth); }
+        .modalcard-leave-active { transition: opacity 0.2s var(--ease-smooth); }
+
+        
+        .phonecard-enter-from { opacity: 0; transform: translateY(18px) scale(0.9); }
+        .phonecard-enter-to   { opacity: 1; transform: translateY(0) scale(1); }
+        .phonecard-enter-active {
+            transition: opacity 0.45s var(--ease-smooth), transform 0.45s var(--ease-smooth);
+        }
+
+        
+        .panel-enter-from   { opacity: 0; transform: translateY(20px) scale(0.97); }
+        .panel-enter-active { transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth); }
+        .panel-leave-to     { opacity: 0; transform: translateY(10px) scale(0.98); }
+        .panel-leave-active { transition: opacity 0.2s var(--ease-smooth), transform 0.2s var(--ease-smooth); }
+        
+        * { transition-timing-function: var(--ease-smooth); }
+
+        
+        .taos-init {
+            transition-property: opacity, transform;
+        }
+
+        
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 250ms;
+            animation-timing-function: var(--ease-smooth);
+        }
+
+        .theme-transition, .theme-transition * {
+            transition-property: background-color, border-color, color, opacity, transform !important;
+            
+            transition-duration: 0.2s, 0.2s, 0.2s, 0.6s, 0.6s !important;
+            transition-timing-function: var(--ease-smooth) !important;
+        }
+
+        
+
+        
+        .proj-collapse {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.45s var(--ease-smooth);
+        }
+        .proj-collapse > * { overflow: hidden; min-height: 0; }
+        .proj-collapse.is-open { grid-template-rows: 1fr; }
+
+        
+        .aurora-sheen {
+            
+            background-image: radial-gradient(ellipse 26% 24% at 50% 50%,
+                rgb(var(--aurora-b-rgb) / 0.30) 0%,
+                rgb(var(--aurora-a-rgb) / 0.13) 50%,
+                transparent 100%);
+            background-size: 230% 230%;
+            background-repeat: no-repeat;
+        }
+
+        
+        .crest-halo {
+            --halo-core: 0.30;
+            --halo-edge: 0.12;
+            position: absolute;
+            inset: -34%;
+            border-radius: 9999px;
+            background-image: radial-gradient(circle at 50% 50%,
+                rgb(var(--aurora-b-rgb) / var(--halo-core)) 0%,
+                rgb(var(--aurora-b-rgb) / var(--halo-edge)) 44%,
+                transparent 72%);
+            filter: blur(5px);
+        }
+
+        
+        .dark .crest-halo {
+            --halo-core: 0.55;
+            --halo-edge: 0.24;
+        }
+
+        
+        @media (prefers-reduced-motion: reduce) {
+            
+            .theme-transition, .theme-transition * { transition: none !important; }
+            html { scroll-behavior: auto !important; }
+
+            
+            ::view-transition-old(root),
+            ::view-transition-new(root) { animation: none !important; }
+
+            
+            .taos-init {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+                visibility: visible !important;
+            }
+            html.js :where([class*="taos:"]:not(.taos-init)) { visibility: visible !important; }
+
+            
+            .proj-collapse, .proj-collapse * { transition: none !important; }
+        }
+    </style>
+
+    
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased transition-colors duration-500 dark:bg-gray-900 dark:text-gray-50">
+
+    <div id="app" v-cloak>
+
+        
+        <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/85 backdrop-blur-md
+                       transition-[background-color,border-color] duration-500
+                       dark:border-gray-700 dark:bg-gray-900/85">
+            <nav class="mx-auto flex max-w-6xl items-center justify-end gap-3 px-4 py-3 sm:px-6 lg:px-8">
+
+                
+                <ul class="hidden items-center gap-1 md:flex">
+                    <li v-for="link in navLinks" :key="link.id">
+                        <a :href="'#' + link.id" @click="goToSection(link.id, $event)"
+                           :aria-current="activeSection === link.id ? 'true' : null"
+                           class="block rounded-lg px-3 py-2 text-sm transition-colors
+                                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2
+                                  dark:focus-visible:ring-gray-100 dark:focus-visible:ring-offset-gray-900"
+                           :class="activeSection === link.id
+                             ? 'font-semibold text-gray-900 dark:text-white'
+                             : 'font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'">
+                            {{ link.label }}
+                        </a>
+                    </li>
+                </ul>
+
+                
+                <button type="button"
+                        @click="toggleDarkMode"
+                        role="switch"
+                        :aria-checked="darkMode"
+                        aria-label="Toggle dark mode"
+                        title="Toggle dark mode"
+                        class="relative inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full
+                               bg-gray-200 outline-none transition-colors duration-500
+                               ring-1 ring-inset ring-gray-300/70
+                               shadow-[inset_0_1px_2px_rgba(0,0,0,0.06)]
+                               hover:bg-gray-300 hover:ring-gray-400/70
+                               focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2
+                               dark:bg-gray-700 dark:ring-gray-600/70 dark:shadow-[inset_0_1px_2px_rgba(0,0,0,0.35)]
+                               dark:hover:bg-gray-600 dark:hover:ring-gray-500/70
+                               dark:focus-visible:ring-gray-500 dark:focus-visible:ring-offset-gray-900
+                               after:absolute after:-inset-2 after:content-['']">
+                    <span class="absolute left-0.5 top-0.5 flex h-6 w-6 items-center justify-center rounded-full
+                                 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.22)]
+                                 transition-transform duration-300 ease-out
+                                 dark:bg-gray-200 dark:shadow-[0_1px_3px_rgba(0,0,0,0.45)]"
+                          :class="darkMode ? 'translate-x-7' : 'translate-x-0'">
+                        
+                        <span class="relative flex h-3.5 w-3.5 items-center justify-center">
+                            <svg class="absolute h-3.5 w-3.5 text-gray-700 transition-all duration-300"
+                                 :class="darkMode ? 'scale-50 opacity-0' : 'scale-100 opacity-100'"
+                                 fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                 viewBox="0 0 24 24" v-html="icons.sun"></svg>
+                            <svg class="absolute h-3.5 w-3.5 text-gray-800 transition-all duration-300"
+                                 :class="darkMode ? 'scale-100 opacity-100' : 'scale-50 opacity-0'"
+                                 fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                 viewBox="0 0 24 24" v-html="icons.moon"></svg>
+                        </span>
+                    </span>
+                </button>
+
+                
+                <button type="button"
+                        @click="navOpen = !navOpen"
+                        :aria-expanded="navOpen"
+                        aria-controls="nav-menu"
+                        :aria-label="navOpen ? 'Close menu' : 'Open menu'"
+                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-gray-300
+                               bg-white text-gray-700 transition-[background-color,border-color] duration-500 hover:bg-gray-100 md:hidden
+                               dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">
+                    <svg v-if="!navOpen" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" v-html="icons.menu"></svg>
+                    <svg v-else class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" v-html="icons.close"></svg>
+                </button>
+            </nav>
+
+            
+            <div v-if="navOpen" id="nav-menu"
+                 class="border-t border-gray-200 md:hidden dark:border-gray-700">
+                <ul class="mx-auto max-w-6xl space-y-1 px-4 py-3">
+                    <li v-for="link in navLinks" :key="link.id">
+                        <a :href="'#' + link.id" @click="goToSection(link.id, $event)"
+                           :aria-current="activeSection === link.id ? 'true' : null"
+                           class="block rounded-lg px-3 py-2.5 text-sm transition-colors
+                                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2
+                                  dark:focus-visible:ring-gray-100 dark:focus-visible:ring-offset-gray-900"
+                           :class="activeSection === link.id
+                             ? 'font-semibold text-gray-900 dark:text-white'
+                             : 'font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'">
+                            {{ link.label }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div aria-hidden="true"
+                 class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gray-100 dark:bg-gray-800">
+                <div class="h-full w-full origin-left bg-gray-900 will-change-transform dark:bg-gray-50"
+                     :style="{ transform: 'scaleX(' + scrollProgress + ')' }"></div>
+            </div>
+        </header>
+
+        
+        <section id="home">
+            <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+
+                
+                <div class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+
+                    
+                    <div class="mx-auto shrink-0 sm:mx-0">
+                        <div class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] h-40 w-40 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm sm:h-48 sm:w-48 dark:border-gray-700 dark:bg-gray-800"
+                             style="transition-delay: 0ms">
+                            
+                            <img v-if="!photoBroken"
+                                 :src="profile.photo"
+                                 :alt="profile.name"
+                                 @error="photoBroken = true"
+                                 loading="eager" fetchpriority="high" decoding="async"
+                                 width="384" height="361"
+                                 class="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]">
+                            <div v-else class="flex h-full w-full flex-col items-center justify-center bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.user"></svg>
+                                <span class="mt-2 text-xs font-semibold">Add images/profile.webp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="min-w-0 flex-1 text-center sm:text-left">
+                        <h1 class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl"
+                            style="transition-delay: 100ms">
+                            {{ profile.name }}
+                        </h1>
+
+                        <p class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] mt-2 flex items-center justify-center gap-1.5 text-sm text-gray-500 sm:justify-start dark:text-gray-400"
+                           style="transition-delay: 200ms">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.pin"></svg>
+                            {{ profile.location }}
+                        </p>
+
+                        <p class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] mt-3 text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200"
+                           style="transition-delay: 300ms">
+                            {{ profile.role }}
+                        </p>
+
+                        
+                        <p class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-gray-600 sm:mx-0 dark:text-gray-400"
+                           style="transition-delay: 400ms">
+                            {{ profile.tagline }}
+                        </p>
+
+                        <div class="taos:opacity-0 taos:translate-y-[16px] duration-[450ms] mt-5 flex flex-wrap justify-center gap-3 sm:justify-start" style="transition-delay: 500ms">
+                            
+                            <button type="button" @click="openResume"
+                                    class="inline-flex min-h-[2.75rem] items-center gap-2 rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white sm:min-h-0
+                                           transition duration-200 hover:bg-gray-700 hover:shadow-md active:scale-[0.97]
+                                           dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-white">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" v-html="icons.file"></svg>
+                                View Resume
+                            </button>
+                            <a href="#contact"
+                               class="inline-flex min-h-[2.75rem] items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 sm:min-h-0
+                                      transition duration-200 hover:bg-gray-100 hover:shadow-md active:scale-[0.97]
+                                      dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" v-html="icons.chat"></svg>
+                                Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <main class="mx-auto max-w-6xl space-y-24 px-4 pb-10 sm:px-6 lg:px-8">
+
+            
+            <div class="grid gap-12 lg:grid-cols-12">
+
+                
+                <section id="about" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] lg:col-span-7" data-taos-offset="300">
+                    
+                    <div class="flex h-full flex-col gap-4">
+
+                        
+                        <div class="shrink-0 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                        <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                            <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.briefcase"></svg>
+                            About Me
+                        </h2>
+
+                        <div class="mt-5 space-y-4 text-[15px] leading-relaxed text-gray-600 dark:text-gray-400">
+                            <p v-for="(paragraph, i) in about.paragraphs" :key="i">{{ paragraph }}</p>
+                        </div>
+                        </div>
+
+                        
+                        <div class="flex-1 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                        <h3 class="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">What I&rsquo;ve been working on</h3>
+
+                        
+                        <ol class="mt-3.5">
+                            <li v-for="(item, i) in timeline" :key="i"
+                                class="relative grid grid-cols-[1rem_1fr] gap-x-4
+                                       taos:opacity-0 taos:translate-y-[16px] duration-[600ms]"
+                                :data-taos-offset="300"
+                                :style="{ transitionDelay: (i * 120) + 'ms' }">
+
+                                
+                                <div class="relative flex h-6 w-6 shrink-0 items-center justify-center justify-self-center">
+
+                                    
+                                    <span v-if="i === 0" aria-hidden="true"
+                                          class="pointer-events-none absolute inset-0 rounded-full bg-gray-400/25
+                                                 animate-ping motion-reduce:animate-none
+                                                 dark:bg-gray-500/20"></span>
+
+                                    
+                                    <span class="pointer-events-none absolute inset-0 rounded-full
+                                                 bg-gray-400/20
+                                                 transition-[opacity,transform] duration-[700ms] ease-out
+                                                 taos:scale-[0.6] taos:opacity-0"
+                                          data-taos-offset="300"></span>
+
+                                    
+                                    <span class="relative z-10 h-3 w-3 rounded-full border-2"
+                                          :class="i === 0
+                                                ? 'border-gray-900 bg-gray-900 dark:border-gray-50 dark:bg-gray-50'
+                                                : 'border-gray-300 bg-white dark:border-gray-600 dark:bg-gray-800'"></span>
+                                </div>
+
+                                
+                                <span v-if="i < timeline.length - 1"
+                                      class="pointer-events-none absolute -bottom-3 left-2 top-3 w-px -translate-x-1/2
+                                             bg-gray-200 dark:bg-gray-700"></span>
+
+                                
+                                <div class="min-w-0" :class="i < timeline.length - 1 ? 'pb-6' : ''">
+                                    <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                                        <p class="text-[15px] font-bold">{{ item.title }}</p>
+                                        <span v-if="item.year" class="text-sm text-gray-400 dark:text-gray-500">{{ item.year }}</span>
+                                    </div>
+                                    <p class="mt-0.5 text-sm text-gray-500 dark:text-gray-400">{{ item.subtitle }}</p>
+                                </div>
+                            </li>
+                        </ol>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="education" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] delay-[100ms] lg:col-span-5" data-taos-offset="300">
+                    <div class="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                        <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                            <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.layers"></svg>
+                            Education
+                        </h2>
+
+                        
+                        
+                        <div class="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-4 transition duration-300 hover:border-gray-300 dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-gray-600">
+                            <div class="flex items-start gap-3">
+                                
+                                <span class="relative flex h-16 w-16 shrink-0 items-center justify-center">
+                                    <template v-if="!schoolLogoBroken">
+                                        
+                                        <div aria-hidden="true"
+                                             class="crest-halo animate-fx-halo pointer-events-none motion-reduce:animate-none"
+                                             :style="auroraStyle(schoolAccent)"></div>
+
+                                        <img src="images/ncst-logo.webp"
+                                             :alt="education.school + ' logo'"
+                                             @error="schoolLogoBroken = true"
+                                             loading="lazy" decoding="async"
+                                             width="132" height="134"
+                                             class="relative h-full w-full object-contain">
+                                    </template>
+                                    <svg v-else class="h-6 w-6 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" v-html="icons.cap"></svg>
+                                </span>
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="text-[15px] font-bold leading-snug">{{ education.school }}</h3>
+                                    <p class="mt-1 flex items-center gap-1 text-[13px] text-gray-500 sm:text-xs dark:text-gray-400">
+                                        <svg class="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.pin"></svg>
+                                        {{ education.location }}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-3.5 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                                <p class="text-sm font-semibold">{{ education.program }}</p>
+                                <span class="text-sm text-gray-400 dark:text-gray-500">{{ education.years }}</span>
+                            </div>
+                            <p class="mt-0.5 text-sm text-gray-500 dark:text-gray-400">{{ education.status }}</p>
+
+                            
+                            <ul class="mt-2.5 flex flex-wrap gap-2.5">
+                                <li v-for="tag in education.focus" :key="tag"
+                                    class="rounded-md bg-gray-200/70 px-2.5 py-1 text-xs font-medium text-gray-700
+                                           dark:bg-gray-700 dark:text-gray-200">
+                                    {{ tag }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                        <h3 class="mt-5 text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">Previous Schools</h3>
+
+                        <ul class="mt-3.5 space-y-2.5">
+                            <li v-for="(school, i) in previousSchools" :key="school.level"
+                                class="rounded-xl border border-gray-200 bg-gray-50 p-4 transition duration-300 hover:border-gray-300
+                                       dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-gray-600
+                                       taos:opacity-0 taos:translate-y-[16px] duration-[600ms]"
+                                data-taos-offset="300"
+                                :style="{ transitionDelay: (i * 100) + 'ms' }">
+
+                                <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                                    <p class="text-sm font-bold">{{ school.level }}</p>
+                                    <span class="text-sm text-gray-400 dark:text-gray-500">{{ school.years }}</span>
+                                </div>
+
+                                <p class="mt-1 text-sm font-semibold">{{ school.school }}</p>
+                                <p v-if="school.strand" class="mt-0.5 text-[13px] text-gray-600 sm:text-xs dark:text-gray-300">{{ school.strand }}</p>
+
+                                <p class="mt-1 flex items-center gap-1 text-[13px] text-gray-500 sm:text-xs dark:text-gray-400">
+                                    <svg class="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.pin"></svg>
+                                    {{ school.location }}
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
+            </div>
+
+            
+            <div class="grid gap-12 lg:grid-cols-12">
+
+                
+                <section id="skills" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] lg:col-span-7" data-taos-offset="300">
+                    <div class="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                        <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                            <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.flask"></svg>
+                            Skills
+                        </h2>
+
+                        
+                        <div v-for="(group, gi) in skillGroups" :key="group.title"
+                             class="mt-6 first:mt-5 taos:opacity-0 taos:translate-y-[20px] duration-[600ms]"
+                             data-taos-offset="260"
+                             :style="{ transitionDelay: (gi * 110) + 'ms' }">
+                            <h3 class="text-sm font-bold">{{ group.title }}</h3>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                <li v-for="skill in group.items" :key="skill"
+                                    class="rounded-lg bg-gray-100 px-3 py-1.5 text-[13px] font-medium text-gray-700
+                                           transition duration-200 hover:bg-gray-200 hover:shadow-sm
+                                           dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600">
+                                    {{ skill }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] delay-[100ms] lg:col-span-5" data-taos-offset="300">
+                    <div class="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                        <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                            <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.award"></svg>
+                            Learning Activities
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                            Academic and self-learning work â€” not official certifications.
+                        </p>
+
+                        <ul class="mt-5 space-y-3">
+                            <li v-for="(item, i) in certifications" :key="i"
+                                class="rounded-xl border border-gray-100 bg-gray-50 p-4 transition hover:duration-300 hover:border-gray-200 hover:shadow-sm dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-gray-600
+                                       taos:opacity-0 taos:translate-y-[20px] duration-[600ms]"
+                                data-taos-offset="260"
+                                :style="{ transitionDelay: (i * 100) + 'ms' }">
+                                <p class="text-sm font-bold">{{ item.title }}</p>
+                                <p class="mt-1 text-[13px] text-gray-500 sm:text-xs dark:text-gray-400">{{ item.subtitle }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            
+            <section id="projects" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms]" data-taos-offset="300">
+                <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                    <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.grid"></svg>
+                        Selected Projects
+                    </h2>
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                        Academic and personal projects, split into systems I built and UI/UX designs I made.
+                    </p>
+
+                    
+                    <div v-for="(group, gi) in projectGroups" :key="group.title"
+                         class="mt-8 first:mt-6 taos:opacity-0 taos:translate-y-[24px] duration-[600ms]"
+                         data-taos-offset="260"
+                         :style="{ transitionDelay: (gi * 140) + 'ms' }">
+                        
+                        <div class="flex items-center gap-2">
+                            <svg class="h-4 w-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons[group.icon]"></svg>
+                            <h3 class="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">{{ group.title }}</h3>
+                            <span class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></span>
+                            <span class="text-xs text-gray-400 dark:text-gray-500">{{ group.items.length }}</span>
+                        </div>
+
+                        
+                        
+                        <div class="mt-4 grid gap-8 sm:grid-cols-2">
+                        <article v-for="(project, i) in shownProjects(group)" :key="project.title"
+                                 class="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-gray-50
+                                        transition hover:duration-300 hover:-translate-y-1 hover:border-gray-200 hover:shadow-md
+                                        dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-gray-600
+                                        taos:opacity-0 taos:translate-y-[20px] duration-[600ms]"
+                                 data-taos-offset="260"
+                                 :style="{ transitionDelay: (i * 90) + 'ms' }">
+
+                            
+                            <div v-if="project.phone"
+                                 class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gray-100 sm:aspect-[16/10] dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative h-[94%] overflow-hidden aspect-[9/19.5] rounded-[1.1rem] border-[3px] border-gray-900 bg-gray-900 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    
+                                    <span class="absolute left-1/2 top-1 z-10 h-1 w-7 -translate-x-1/2 rounded-full bg-gray-900/80 dark:bg-gray-900"></span>
+                                    <div class="h-full w-full overflow-hidden rounded-[0.8rem] bg-white dark:bg-gray-900">
+                                        
+                                        <template v-if="project.image && !brokenImages.includes(project.title)">
+                                            <img :src="project.image"
+                                                 :alt="project.title"
+                                                 @error="onImageError(project)" loading="lazy" decoding="async"
+                                                 class="h-full w-full object-cover">
+
+                                        
+                                        <div v-if="hasAurora(project)"
+                                             aria-hidden="true"
+                                             class="aurora-sheen animate-[fx-aurora_8s_linear_infinite] pointer-events-none absolute inset-0 z-[5] mix-blend-plus-lighter motion-reduce:hidden"
+                                             :style="auroraStyle(project)"></div>
+                                        </template>
+                                        <template v-else>
+                                            <div class="flex h-full w-full flex-col items-center justify-center p-2 text-center text-gray-400 dark:text-gray-500">
+                                                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                                <span class="mt-1 text-[10px] font-medium leading-tight">Add {{ project.imageName }}</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else-if="project.browser"
+                                 class="relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden bg-gray-100 p-3 dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative w-full overflow-hidden rounded-lg border-[3px] border-gray-900 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    
+                                    <div class="flex items-center gap-1.5 border-b border-gray-200 bg-gray-50 px-2.5 py-1.5 dark:border-gray-700 dark:bg-gray-700">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-red-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                                        
+                                        <span class="ml-1 flex-1 truncate rounded bg-white px-2 py-0.5 text-[9px] text-gray-400 dark:bg-gray-900 dark:text-gray-500">
+                                            {{ project.url }}
+                                        </span>
+                                    </div>
+                                    <img v-if="project.image && !brokenImages.includes(project.title)"
+                                         :src="project.image"
+                                         :alt="project.title"
+                                         @error="onImageError(project)" loading="lazy" decoding="async"
+                                         class="aspect-[16/10] w-full object-cover object-top">
+                                    <div v-else class="flex aspect-[16/10] w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                        <span class="mt-1.5 text-[10px] font-medium">Add {{ project.imageName }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else class="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                <img v-if="project.image && !brokenImages.includes(project.title)"
+                                     :src="project.image"
+                                     :alt="project.title"
+                                     @error="onImageError(project)" loading="lazy" decoding="async"
+                                     class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                <div v-else class="flex h-full w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                    <span class="mt-2 px-4 text-center text-[11px] font-medium leading-tight">Add screenshot:<br>{{ project.imageName }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-1 flex-col p-5">
+                                
+                                <h3 class="text-[15px] font-bold">{{ project.title }}</h3>
+                                <p class="mt-1.5 flex-1 text-sm leading-relaxed text-gray-500 dark:text-gray-400">{{ project.summary }}</p>
+
+                                <ul class="mt-4 flex flex-wrap gap-1.5">
+                                    <li v-for="tech in project.tech" :key="tech"
+                                        class="rounded-md bg-gray-200/70 px-2.5 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+                                        {{ tech }}
+                                    </li>
+                                </ul>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <button type="button" @click="openProject(project)"
+                                            class="inline-flex min-h-[2.75rem] items-center gap-1.5 rounded-lg bg-gray-900 px-3.5 py-2 text-[13px] font-semibold text-white sm:min-h-0 sm:text-xs
+                                                   transition duration-200 hover:bg-gray-700 hover:shadow-md active:scale-[0.97]
+                                                   dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-white">
+                                        View Details
+                                    </button>
+                                    
+                                    <a v-if="hasProjectLink(project)" :href="project.link" target="_blank" rel="noopener"
+                                       class="inline-flex min-h-[2.75rem] items-center gap-1.5 rounded-lg border border-gray-300 px-3.5 py-2 text-[13px] font-semibold text-gray-700 sm:min-h-0 sm:text-xs
+                                              transition duration-200 hover:bg-gray-200 active:scale-[0.97]
+                                              dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+                                        View Project
+                                        <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" v-html="icons.chevron"></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        </div>
+
+                        
+                        <div v-if="hasMoreProjects(group)" class="mt-8 flex justify-center">
+                            <button type="button"
+                                    @click="toggleProjectGroup(group.title)"
+                                    :aria-expanded="isGroupExpanded(group.title)"
+                                    :aria-controls="'project-extra-' + gi"
+                                    class="inline-flex min-h-[2.75rem] items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 shadow-sm
+                                           transition duration-300 hover:border-gray-400 hover:bg-gray-100 hover:shadow-md active:scale-[0.98]
+                                           dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-700">
+                                <span>{{ isGroupExpanded(group.title) ? 'Show Less' : 'Show More' }}</span>
+                                
+                                <span class="flex h-4 w-4 shrink-0 items-center justify-center transition-transform duration-300 motion-reduce:transition-none"
+                                      :class="isGroupExpanded(group.title) ? '-rotate-90' : 'rotate-90'">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                         viewBox="0 0 24 24" aria-hidden="true" v-html="icons.chevron"></svg>
+                                </span>
+                            </button>
+                        </div>
+
+                        
+                        <div v-if="hasMoreProjects(group)"
+                             :id="'project-extra-' + gi"
+                             class="proj-collapse"
+                             :class="{ 'is-open': isGroupExpanded(group.title) }"
+                             :inert="!isGroupExpanded(group.title)">
+                            <div>
+                                <div class="mt-8 grid gap-8 sm:grid-cols-2">
+                        <article v-for="(project, i) in hiddenProjects(group)" :key="project.title"
+                                 class="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-gray-50
+                                        transition hover:duration-300 hover:-translate-y-1 hover:border-gray-200 hover:shadow-md
+                                        dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-gray-600
+                                        taos:opacity-0 taos:translate-y-[20px] duration-[600ms]"
+                                 data-taos-offset="260"
+                                 data-taos-skip     data-taos-offset="260"
+                                 :style="{ transitionDelay: (i * 90) + 'ms' }">
+
+                            
+                            <div v-if="project.phone"
+                                 class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gray-100 sm:aspect-[16/10] dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative h-[94%] overflow-hidden aspect-[9/19.5] rounded-[1.1rem] border-[3px] border-gray-900 bg-gray-900 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    
+                                    <span class="absolute left-1/2 top-1 z-10 h-1 w-7 -translate-x-1/2 rounded-full bg-gray-900/80 dark:bg-gray-900"></span>
+                                    <div class="h-full w-full overflow-hidden rounded-[0.8rem] bg-white dark:bg-gray-900">
+                                        
+                                        <template v-if="project.image && !brokenImages.includes(project.title)">
+                                            <img :src="project.image"
+                                                 :alt="project.title"
+                                                 @error="onImageError(project)" loading="lazy" decoding="async"
+                                                 class="h-full w-full object-cover">
+
+                                        
+                                        <div v-if="hasAurora(project)"
+                                             aria-hidden="true"
+                                             class="aurora-sheen animate-[fx-aurora_8s_linear_infinite] pointer-events-none absolute inset-0 z-[5] mix-blend-plus-lighter motion-reduce:hidden"
+                                             :style="auroraStyle(project)"></div>
+                                        </template>
+                                        <template v-else>
+                                            <div class="flex h-full w-full flex-col items-center justify-center p-2 text-center text-gray-400 dark:text-gray-500">
+                                                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                                <span class="mt-1 text-[10px] font-medium leading-tight">Add {{ project.imageName }}</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else-if="project.browser"
+                                 class="relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden bg-gray-100 p-3 dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative w-full overflow-hidden rounded-lg border-[3px] border-gray-900 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    
+                                    <div class="flex items-center gap-1.5 border-b border-gray-200 bg-gray-50 px-2.5 py-1.5 dark:border-gray-700 dark:bg-gray-700">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-red-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                                        
+                                        <span class="ml-1 flex-1 truncate rounded bg-white px-2 py-0.5 text-[9px] text-gray-400 dark:bg-gray-900 dark:text-gray-500">
+                                            {{ project.url }}
+                                        </span>
+                                    </div>
+                                    <img v-if="project.image && !brokenImages.includes(project.title)"
+                                         :src="project.image"
+                                         :alt="project.title"
+                                         @error="onImageError(project)" loading="lazy" decoding="async"
+                                         class="aspect-[16/10] w-full object-cover object-top">
+                                    <div v-else class="flex aspect-[16/10] w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                        <span class="mt-1.5 text-[10px] font-medium">Add {{ project.imageName }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else class="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                <img v-if="project.image && !brokenImages.includes(project.title)"
+                                     :src="project.image"
+                                     :alt="project.title"
+                                     @error="onImageError(project)" loading="lazy" decoding="async"
+                                     class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                <div v-else class="flex h-full w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                    <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                    <span class="mt-2 px-4 text-center text-[11px] font-medium leading-tight">Add screenshot:<br>{{ project.imageName }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-1 flex-col p-5">
+                                
+                                <h3 class="text-[15px] font-bold">{{ project.title }}</h3>
+                                <p class="mt-1.5 flex-1 text-sm leading-relaxed text-gray-500 dark:text-gray-400">{{ project.summary }}</p>
+
+                                <ul class="mt-4 flex flex-wrap gap-1.5">
+                                    <li v-for="tech in project.tech" :key="tech"
+                                        class="rounded-md bg-gray-200/70 px-2.5 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+                                        {{ tech }}
+                                    </li>
+                                </ul>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <button type="button" @click="openProject(project)"
+                                            class="inline-flex min-h-[2.75rem] items-center gap-1.5 rounded-lg bg-gray-900 px-3.5 py-2 text-[13px] font-semibold text-white sm:min-h-0 sm:text-xs
+                                                   transition duration-200 hover:bg-gray-700 hover:shadow-md active:scale-[0.97]
+                                                   dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-white">
+                                        View Details
+                                    </button>
+                                    
+                                    <a v-if="hasProjectLink(project)" :href="project.link" target="_blank" rel="noopener"
+                                       class="inline-flex min-h-[2.75rem] items-center gap-1.5 rounded-lg border border-gray-300 px-3.5 py-2 text-[13px] font-semibold text-gray-700 sm:min-h-0 sm:text-xs
+                                              transition duration-200 hover:bg-gray-200 active:scale-[0.97]
+                                              dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+                                        View Project
+                                        <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" v-html="icons.chevron"></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="gallery" v-if="showGallery" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms]" data-taos-offset="300">
+                <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                    <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                        Selected Work
+                    </h2>
+
+                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                        Screenshots of my projects and Figma designs. Save the files next to this file and type the file name in the <code class="rounded bg-gray-100 px-1.5 py-0.5 text-xs dark:bg-gray-700">gallery</code> list.
+                    </p>
+
+                    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+                        <figure v-for="item in gallery" :key="item.title"
+                                class="group overflow-hidden rounded-xl border border-gray-200 bg-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-700">
+
+                            
+                            <div v-if="item.phone" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gray-100 sm:aspect-[16/10] dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative h-[92%] overflow-hidden aspect-[9/19.5] rounded-[1.1rem] border-[3px] border-gray-900 bg-gray-900 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    <span class="absolute left-1/2 top-1 z-10 h-1 w-7 -translate-x-1/2 rounded-full bg-gray-900/80 dark:bg-gray-900"></span>
+                                    <div class="h-full w-full overflow-hidden rounded-[0.8rem] bg-white dark:bg-gray-900">
+                                        <img v-if="item.image && !brokenImages.includes(item.title)"
+                                             :src="item.image"
+                                             :alt="item.title"
+                                             @error="onImageError(item)" loading="lazy" decoding="async"
+                                             class="h-full w-full object-cover">
+                                        <div v-else class="flex h-full w-full flex-col items-center justify-center p-2 text-center text-gray-400 dark:text-gray-500">
+                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                            <span class="mt-1 text-[10px] font-medium leading-tight">{{ item.title }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else-if="item.browser" class="relative flex items-center justify-center overflow-hidden bg-gray-100 p-3 dark:bg-gray-700">
+                                <div class="animate-phone-float motion-reduce:animate-none relative w-full overflow-hidden rounded-lg border-[3px] border-gray-900 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    <div class="flex items-center gap-1.5 border-b border-gray-200 bg-gray-50 px-2 py-1.5 dark:border-gray-700 dark:bg-gray-700">
+                                        <span class="h-1.5 w-1.5 rounded-full bg-red-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                                        <span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                                        <span class="ml-1 flex-1 truncate rounded bg-white px-1.5 py-0.5 text-[9px] text-gray-400 dark:bg-gray-900 dark:text-gray-500">
+                                            {{ item.url }}
+                                        </span>
+                                    </div>
+                                    <img v-if="item.image && !brokenImages.includes(item.title)"
+                                         :src="item.image"
+                                         :alt="item.title"
+                                         @error="onImageError(item)" loading="lazy" decoding="async"
+                                         class="aspect-[4/3] w-full object-cover object-top">
+                                    <div v-else class="flex aspect-[4/3] w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                        <span class="mt-1 text-[10px] font-medium">{{ item.title }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div v-else>
+                                <img v-if="item.image && !brokenImages.includes(item.title)"
+                                     :src="item.image"
+                                     :alt="item.title"
+                                     @error="onImageError(item)" loading="lazy" decoding="async"
+                                     class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                <div v-else class="flex aspect-[4/3] w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                    <span class="mt-2 px-2 text-center text-[11px] font-medium leading-tight">{{ item.title }}</span>
+                                </div>
+                            </div>
+
+                            <figcaption class="border-t border-gray-200 bg-white px-3 py-2 text-[11px] font-medium text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
+                                {{ item.title }}
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="contact" class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms]" data-taos-offset="300">
+                <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+                    <div class="grid gap-10 lg:grid-cols-12 lg:gap-12">
+
+                        
+                        <div class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] lg:col-span-5" data-taos-offset="260">
+                            <h2 class="flex items-center gap-2.5 text-lg font-bold sm:text-xl">
+                                <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.chat"></svg>
+                                Contact
+                            </h2>
+
+                            <p class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">{{ contact.text }}</p>
+
+                            
+                            
+                            <h3 :key="contactTyped" class="mt-6 text-3xl font-extrabold leading-[1.12] tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50">
+                                <span class="relative inline-block" :ref="el => setTypeLine(el, 0)">Let's work<span
+                                    :ref="el => setTypeCaret(el, 0)"
+                                    class="absolute inset-y-[0.14em] left-0 w-[0.07em] min-w-[2px] opacity-0 will-change-transform"
+                                    aria-hidden="true"><span
+                                        class="block h-full w-full bg-gray-300 animate-fx-caret motion-reduce:animate-none dark:bg-gray-600"></span></span></span><br>
+                                <span class="relative inline-block" :ref="el => setTypeLine(el, 1)"> together<span class="text-gray-300 dark:text-gray-600">.</span><span
+                                    :ref="el => setTypeCaret(el, 1)"
+                                    class="absolute inset-y-[0.14em] left-0 w-[0.07em] min-w-[2px] opacity-0 will-change-transform"
+                                    aria-hidden="true"><span
+                                        class="block h-full w-full bg-gray-300 animate-fx-caret motion-reduce:animate-none dark:bg-gray-600"></span></span></span>
+                            </h3>
+
+                            
+                            <a :href="mailLink"
+                               class="mt-5 inline-block break-all text-base font-semibold text-gray-900 transition-colors hover:text-black dark:text-gray-50 dark:hover:text-white sm:text-lg">
+                                {{ profile.email }}
+                            </a>
+
+                            <div class="mt-8">
+                                <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Based in</p>
+                                <p class="mt-1.5 text-sm text-gray-700 dark:text-gray-200">{{ profile.location }}</p>
+                            </div>
+
+                            
+                            <div v-if="realSocials.length" class="mt-7">
+                                <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Elsewhere</p>
+                                <ul class="mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-2">
+                                    <li v-for="(social, i) in realSocials" :key="social.name" class="flex items-center gap-2.5">
+                                        
+                                        <a :href="social.url" :target="social.url.startsWith('http') ? '_blank' : null" rel="noopener"
+                                           class="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-600 underline decoration-transparent underline-offset-[6px]
+                                                  transition-colors hover:text-gray-900 hover:decoration-gray-400
+                                                  dark:text-gray-300 dark:hover:text-white dark:hover:decoration-gray-500">
+                                            {{ social.name }}
+                                        </a>
+                                        <span v-if="i < realSocials.length - 1" class="text-[11px] text-gray-300 dark:text-gray-600" aria-hidden="true">/</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                        <div class="taos:opacity-0 taos:translate-y-[24px] duration-[600ms] delay-[100ms] lg:col-span-7" data-taos-offset="260">
+                            
+                            <form class="rounded-xl border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900/40"
+                                  @submit.prevent="openInGmail">
+
+                                
+                                <div class="grid gap-4 border-b border-gray-200 p-5 sm:grid-cols-2 sm:p-6 dark:border-gray-700">
+                                    <div class="min-w-0">
+                                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">To</p>
+                                        <p class="mt-1.5 break-all text-sm font-medium text-gray-900 dark:text-gray-100">{{ profile.email }}</p>
+                                    </div>
+                                    <div class="sm:text-right">
+                                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Date</p>
+                                        
+                                        <p class="mt-1.5 text-lg font-semibold tabular-nums tracking-tight text-gray-900 dark:text-gray-50">{{ letterTime }}</p>
+                                        <p class="text-[13px] text-gray-600 sm:text-xs dark:text-gray-300">{{ letterDate }} &middot; Manila</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="grid gap-5 border-b border-gray-200 p-5 sm:grid-cols-2 sm:p-6 dark:border-gray-700">
+                                    <div>
+                                        <label for="letter-name" class="block text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Your name</label>
+                                        <input id="letter-name" v-model="letterName" type="text" maxlength="60" autocomplete="name"
+                                               placeholder="Your name"
+                                               class="mt-2 w-full border-0 border-b border-gray-300 bg-transparent pb-1.5 text-sm text-gray-900 outline-none transition-colors
+                                                      placeholder:text-gray-400 focus:border-gray-900
+                                                      dark:border-gray-700 dark:text-gray-50 dark:placeholder:text-gray-500 dark:focus:border-gray-400">
+                                    </div>
+                                    <div>
+                                        <label for="letter-email" class="block text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Your email</label>
+                                        <input id="letter-email" v-model="letterEmail" type="email" maxlength="80" autocomplete="email"
+                                               placeholder="you@company.com"
+                                               class="mt-2 w-full border-0 border-b border-gray-300 bg-transparent pb-1.5 text-sm text-gray-900 outline-none transition-colors
+                                                      placeholder:text-gray-400 focus:border-gray-900
+                                                      dark:border-gray-700 dark:text-gray-50 dark:placeholder:text-gray-500 dark:focus:border-gray-400">
+                                    </div>
+                                </div>
+
+                                
+                                <div class="p-5 sm:p-6">
+                                    <div class="flex items-baseline justify-between gap-3">
+                                        <label for="letter-message" class="block text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">Message</label>
+                                        <span class="text-[11px] tabular-nums text-gray-400 dark:text-gray-500">{{ letterMessage.length }} / {{ letterMax }}</span>
+                                    </div>
+                                    <textarea id="letter-message" v-model="letterMessage" rows="5" :maxlength="letterMax"
+                                              placeholder="Tell me a bit about what you have in mind&hellip;"
+                                              class="mt-2 w-full resize-y border-0 border-b border-gray-300 bg-transparent pb-1.5 text-sm leading-relaxed text-gray-900 outline-none transition-colors
+                                                     placeholder:text-gray-400 focus:border-gray-900
+                                                     dark:border-gray-700 dark:text-gray-50 dark:placeholder:text-gray-500 dark:focus:border-gray-400"></textarea>
+                                </div>
+
+                                
+                                <div class="flex flex-col items-stretch gap-2.5 border-t border-gray-200 p-5 sm:flex-row sm:items-center sm:p-6 dark:border-gray-700">
+                                    <button type="button" @click="openInGmail" :disabled="!canSendLetter"
+                                            class="inline-flex min-h-[2.75rem] w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white
+                                                   transition duration-300 hover:bg-gray-700 sm:flex-1 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-white
+                                                   disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:bg-gray-200
+                                                   dark:disabled:bg-gray-700/70 dark:disabled:text-gray-500 dark:disabled:hover:bg-gray-700/70">
+                                        Send letter
+                                        <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" v-html="icons.arrowRight"></svg>
+                                    </button>
+
+                                    <button type="button" @click="openLetterForReview" :disabled="!canSendLetter"
+                                            class="inline-flex min-h-[2.75rem] w-full items-center justify-center whitespace-nowrap rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-700
+                                                   transition duration-300 hover:border-gray-400 hover:bg-gray-100 sm:flex-1
+                                                   dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-800
+                                                   disabled:cursor-not-allowed disabled:border-gray-200 disabled:text-gray-400 disabled:hover:border-gray-200 disabled:hover:bg-transparent
+                                                   dark:disabled:border-gray-700 dark:disabled:text-gray-500 dark:disabled:hover:border-gray-700 dark:disabled:hover:bg-transparent">
+                                        Open in Gmail
+                                    </button>
+
+                                    <button type="button" @click="copyAddress"
+                                            class="inline-flex min-h-[2.75rem] w-full items-center justify-center whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-semibold text-gray-500
+                                                   transition duration-300 hover:text-gray-900 sm:ml-auto sm:w-auto
+                                                   dark:text-gray-400 dark:hover:text-gray-50">
+                                        {{ addressCopied ? 'Address copied' : 'Copy address' }}
+                                    </button>
+                                </div>
+
+                                <p class="px-5 pb-5 text-[11px] leading-relaxed text-gray-400 sm:px-6 sm:pb-6 dark:text-gray-500">
+                                    Either button opens your own mail app with the letter already written &mdash; you can read the
+                                    whole thing, and the recipient, before anything is sent. Nothing leaves this page.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt-10 grid gap-8 border-t border-gray-200 pt-8 lg:grid-cols-2 lg:gap-10 dark:border-gray-700">
+
+                        
+                        <div>
+                            <h2 class="flex items-center gap-2.5 text-base font-bold">
+                                <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.target"></svg>
+                                Goals
+                            </h2>
+                            <ul class="mt-4 space-y-2">
+                                <li v-for="(goal, i) in goals" :key="i"
+                                    class="rounded-xl bg-gray-100 p-4 text-sm leading-relaxed text-gray-700 transition duration-300 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600">
+                                    {{ goal }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                        <div>
+                            <h2 class="flex items-center gap-2.5 text-base font-bold">
+                                <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.link"></svg>
+                                Quick links
+                            </h2>
+                            <ul class="mt-4 space-y-2">
+                                <li v-for="option in contactOptions" :key="option.label">
+                                    
+                                    <a :href="option.link"
+                                       :target="option.newTab ? '_blank' : null"
+                                       :download="option.download || null"
+                                       rel="noopener"
+                                       class="group flex min-h-[2.75rem] items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm font-semibold text-gray-800
+                                              transition duration-300 hover:border-gray-300 hover:bg-gray-100 hover:shadow-sm
+                                              dark:border-gray-700 dark:bg-gray-900/40 dark:text-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+                                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-700
+                                                     transition duration-300 group-hover:border-gray-300
+                                                     dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons[option.icon]"></svg>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block">{{ option.label }}</span>
+                                            <span class="block truncate text-[13px] font-normal text-gray-500 sm:text-xs dark:text-gray-400">{{ option.value }}</span>
+                                        </span>
+                                        <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-hover:translate-x-0.5 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" v-html="icons.chevron"></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        <footer class="border-t border-gray-200 bg-white transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900">
+            <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center gap-5 sm:flex-row sm:justify-between">
+                    <div class="text-center sm:text-left">
+                        <p class="text-sm font-bold">Shan Lee Garmino</p>
+                        <p class="mt-1 text-[13px] text-gray-500 sm:text-xs dark:text-gray-400">BSIT STUDENT &middot; Dasmarinas, Cavite, Philippines</p>
+                    </div>
+
+                    <ul class="flex items-center gap-2">
+                        <li v-for="social in socials" :key="social.name">
+                            
+                            <a :href="social.url" :target="social.url.startsWith('http') ? '_blank' : null" rel="noopener" :aria-label="social.name" :title="social.name"
+                               class="flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 sm:h-9 sm:w-9
+                                      transition duration-300 hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm active:scale-95
+                                      dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-50">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons[social.icon]"></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        
+        <Transition name="modal">
+            <div v-if="resumeOpen"
+                 class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900/50 p-4 backdrop-blur-sm dark:bg-black/60"
+                 @click.self="closeResume">
+                <Transition name="panel" appear>
+                    <div class="my-auto flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-gray-800"
+                         role="dialog" aria-modal="true" aria-label="Resume">
+
+                        
+                        <div class="flex items-center gap-3 border-b border-gray-200 p-5 dark:border-gray-700">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" v-html="icons.file"></svg>
+                            </span>
+                            <div class="min-w-0 flex-1">
+                                <h3 class="truncate text-base font-bold">Resume</h3>
+                                <p class="truncate text-xs text-gray-500 dark:text-gray-400">{{ profile.name }}</p>
+                            </div>
+
+                            
+                            <a :href="profile.resume" :download="resumeFileName"
+                               class="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-2 text-xs font-semibold text-gray-700
+                                      transition duration-200 hover:bg-gray-100 active:scale-[0.97]
+                                      dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" v-html="icons.download"></svg>
+                                Download
+                            </a>
+
+                            <button type="button" @click="closeResume" aria-label="Close resume" title="Close"
+                                    class="shrink-0 rounded-lg p-2 text-gray-500 transition duration-200 hover:bg-gray-100 hover:text-gray-900
+                                           dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24" v-html="icons.close"></svg>
+                            </button>
+                        </div>
+
+                        
+                        <div class="flex min-h-0 flex-1 items-center justify-center overflow-auto bg-gray-100 p-2 sm:p-4 dark:bg-gray-900">
+                            
+                            <img v-if="!resumeImageBroken"
+                                 :src="resumePreviewImage"
+                                 :alt="'Resume of ' + profile.name"
+                                 @error="resumeImageBroken = true"
+                                 loading="lazy" decoding="async"
+                                 width="900" height="1273"
+                                 class="block h-auto max-h-[min(62vh,calc(92vh-12rem))] w-auto max-w-full rounded-lg border border-gray-200 bg-white object-contain dark:border-gray-700">
+
+                            
+                            <object v-else :data="resumeViewerSrc" type="application/pdf"
+                                    class="h-full min-h-[24rem] w-full">
+                                <div class="flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center">
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        Your browser cannot show the PDF here.
+                                    </p>
+                                    <a :href="profile.resume" target="_blank" rel="noopener"
+                                       class="rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition duration-200 hover:bg-gray-700 dark:bg-gray-50 dark:text-gray-900">
+                                        Open in a new tab
+                                    </a>
+                                </div>
+                            </object>
+                        </div>
+
+                        
+                        <div class="flex items-center justify-end gap-2 border-t border-gray-200 p-4 dark:border-gray-700">
+                            <button type="button" @click="closeResume"
+                                    class="min-h-[2.75rem] rounded-lg border border-gray-300 px-3.5 py-2 text-[13px] font-semibold text-gray-700 sm:min-h-0 sm:text-xs
+                                           transition duration-200 hover:bg-gray-100 active:scale-[0.97]
+                                           dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </Transition>
+            </div>
+        </Transition>
+
+        
+        <Transition name="modal">
+            <div v-if="selectedProject"
+                 class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900/50 p-4 backdrop-blur-sm dark:bg-black/60"
+                 @click.self="closeProject">
+                <Transition name="modalcard" appear>
+                    
+                    <div class="my-auto max-h-[92vh] w-full max-w-2xl overflow-x-hidden overflow-y-auto rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-gray-800"
+                         role="dialog" aria-modal="true" :aria-label="selectedProject.title">
+
+                        
+                        <div v-if="selectedProject.phone"
+                             class="flex aspect-[16/9] w-full items-center justify-center overflow-hidden bg-gray-100 dark:bg-gray-700">
+                            <Transition name="phonecard" appear>
+                                <div class="relative h-[94%] overflow-hidden aspect-[9/19.5] rounded-[1.1rem] border-[3px] border-gray-900 bg-gray-900 shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                    <span class="absolute left-1/2 top-1 z-10 h-1 w-7 -translate-x-1/2 rounded-full bg-gray-900/80 dark:bg-gray-900"></span>
+                                    <div class="h-full w-full overflow-hidden rounded-[0.8rem] bg-white dark:bg-gray-900">
+                                        
+                                        <template v-if="selectedProject.image && !brokenImages.includes(selectedProject.title)">
+                                            <img :src="selectedProject.image"
+                                                 :alt="selectedProject.title"
+                                                 @error="onImageError(selectedProject)" loading="lazy" decoding="async"
+                                                 class="h-full w-full object-cover">
+
+                                            
+                                            <div v-if="hasAurora(selectedProject)"
+                                                 aria-hidden="true"
+                                                 class="aurora-sheen animate-[fx-aurora_8s_linear_infinite] pointer-events-none absolute inset-0 z-[5] mix-blend-plus-lighter motion-reduce:hidden"
+                                                 :style="auroraStyle(selectedProject)"></div>
+                                        </template>
+                                        <div v-else class="flex h-full w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                            <span class="mt-1.5 text-[10px] font-medium">Add {{ selectedProject.imageName }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Transition>
+                        </div>
+
+                        
+                        <div v-else-if="selectedProject.browser"
+                             class="flex aspect-[16/9] w-full items-center justify-center overflow-hidden bg-gray-100 p-4 dark:bg-gray-700">
+                            <div class="w-full overflow-hidden rounded-lg border-[3px] border-gray-900 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800">
+                                <div class="flex items-center gap-1.5 border-b border-gray-200 bg-gray-50 px-2.5 py-1.5 dark:border-gray-700 dark:bg-gray-700">
+                                    <span class="h-1.5 w-1.5 rounded-full bg-red-400"></span>
+                                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                                    <span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                                    <span class="ml-1 flex-1 truncate rounded bg-white px-2 py-0.5 text-[9px] text-gray-400 dark:bg-gray-900 dark:text-gray-500">
+                                        {{ selectedProject.url }}
+                                    </span>
+                                </div>
+                                <img v-if="selectedProject.image && !brokenImages.includes(selectedProject.title)"
+                                     :src="selectedProject.image"
+                                     :alt="selectedProject.title"
+                                     @error="onImageError(selectedProject)" loading="lazy" decoding="async"
+                                     class="aspect-[16/9] w-full object-cover object-top">
+                                <div v-else class="flex aspect-[16/9] w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                    <span class="mt-1.5 text-[10px] font-medium">Add {{ selectedProject.imageName }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div v-else class="relative aspect-[16/9] w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
+                            <img v-if="selectedProject.image && !brokenImages.includes(selectedProject.title)"
+                                 :src="selectedProject.image"
+                                 :alt="selectedProject.title"
+                                 @error="onImageError(selectedProject)" loading="lazy" decoding="async"
+                                 class="h-full w-full object-cover">
+                            <div v-else class="flex h-full w-full flex-col items-center justify-center text-gray-400 dark:text-gray-500">
+                                <svg class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" v-html="icons.image"></svg>
+                                <span class="mt-2 text-xs font-medium">Add screenshot: {{ selectedProject.imageName }}</span>
+                            </div>
+                        </div>
+
+                        <div class="max-h-[55vh] overflow-y-auto p-6 sm:p-8">
+                            <h3 class="text-xl font-bold">{{ selectedProject.title }}</h3>
+                            <p class="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">{{ selectedProject.summary }}</p>
+
+                            <dl class="mt-6 space-y-4">
+                                <div>
+                                    <dt class="text-sm font-bold">Technologies</dt>
+                                    <dd class="mt-2 flex flex-wrap gap-1.5">
+                                        <span v-for="tech in selectedProject.tech" :key="tech"
+                                              class="rounded-md bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+                                            {{ tech }}
+                                        </span>
+                                    </dd>
+                                </div>
+                                <div v-if="selectedProject.role">
+                                    <dt class="text-sm font-bold">My role</dt>
+                                    <dd class="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">{{ selectedProject.role }}</dd>
+                                </div>
+                                <div v-if="selectedProject.learned">
+                                    <dt class="text-sm font-bold">What I learned</dt>
+                                    <dd class="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">{{ selectedProject.learned }}</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-3 border-t border-gray-200 p-6 dark:border-gray-700"
+                             :class="hasProjectLink(selectedProject) ? 'justify-between' : 'justify-end'">
+                            <a v-if="hasProjectLink(selectedProject)"
+                               :href="selectedProject.link" target="_blank" rel="noopener"
+                               class="inline-flex items-center gap-1.5 rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white
+                                      transition duration-200 hover:bg-gray-700 active:scale-[0.97]
+                                      dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-white">
+                                View Project
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" v-html="icons.chevron"></svg>
+                            </a>
+                            <button type="button" @click="closeProject"
+                                    class="rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-700
+                                           transition duration-200 hover:bg-gray-100 active:scale-[0.97]
+                                           dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </Transition>
+            </div>
+        </Transition>
+
+        
+        
+        <div class="fixed bottom-0 right-0 z-40 flex flex-col items-end
+                    pb-[max(1rem,env(safe-area-inset-bottom))]
+                    pr-[max(1rem,env(safe-area-inset-right))]
+                    pl-[max(0.5rem,env(safe-area-inset-left))]">
+
+            
+            <Transition name="chat">
+                <div v-if="chatOpen"
+                     class="mb-3 flex w-[calc(100vw-1.5rem)] max-w-[min(24rem,calc(100vw-1.5rem))] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl
+                            max-h-[min(30rem,calc(100dvh-8rem))] sm:max-h-[28rem] dark:border-gray-700 dark:bg-gray-800">
+
+                    
+                    <div class="flex items-center gap-3 border-b border-gray-200 p-4 dark:border-gray-700">
+                        
+                        <span class="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-900 dark:bg-gray-50">
+                            <img v-if="!avatarBroken" :src="profile.photo" :alt="profile.name" @error="avatarBroken = true" loading="lazy" decoding="async" width="384" height="361"
+                                 class="h-full w-full object-cover object-top">
+                            <span v-else class="text-xs font-bold text-white dark:text-gray-900">SLG</span>
+                        </span>
+                        <div class="min-w-0 flex-1">
+                            <p class="truncate text-sm font-bold">{{ profile.name }}</p>
+                            <p class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
+                                <span class="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                                Online
+                            </p>
+                        </div>
+                        <button type="button" @click="chatOpen = false" aria-label="Minimize chat" title="Minimize chat"
+                                class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-gray-400 transition duration-200 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-200
+                                       after:absolute after:-inset-1.5 after:content-[''] sm:after:hidden">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" v-html="icons.minimize"></svg>
+                        </button>
+                    </div>
+
+                    
+                    <div ref="chatBox" class="min-h-0 flex-1 space-y-4 overflow-y-auto p-4">
+                        <div v-for="message in messages" :key="message.id" class="flex gap-2.5">
+                            <span v-if="message.from === 'bot'"
+                                  class="relative mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-900 dark:bg-gray-50">
+                                <img v-if="!avatarBroken" :src="profile.photo" :alt="profile.name" @error="avatarBroken = true" loading="lazy" decoding="async" width="384" height="361"
+                                     class="h-full w-full object-cover object-top">
+                                <span v-else class="text-[10px] font-bold text-white dark:text-gray-900">SLG</span>
+                            </span>
+
+                            <div class="max-w-[80%]">
+                                <div class="rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed"
+                                     :class="message.from === 'bot'
+                                         ? 'rounded-tl-sm bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-100'
+                                         : 'rounded-tr-sm bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900'">
+                                    {{ message.text }}
+                                </div>
+                                <p class="mt-1 px-1 text-[10px] text-gray-400 dark:text-gray-500">{{ message.time }}</p>
+                            </div>
+                        </div>
+
+                        
+                        <div v-if="typing" class="flex gap-2.5">
+                            <span class="relative mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-900 dark:bg-gray-50">
+                                <img v-if="!avatarBroken" :src="profile.photo" :alt="profile.name" @error="avatarBroken = true" loading="lazy" decoding="async" width="384" height="361"
+                                     class="h-full w-full object-cover object-top">
+                                <span v-else class="text-[10px] font-bold text-white dark:text-gray-900">SLG</span>
+                            </span>
+                            <div class="rounded-2xl rounded-tl-sm bg-gray-100 px-3.5 py-2.5 text-sm text-gray-500 dark:bg-gray-700 dark:text-gray-300">Typingâ€¦</div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="border-t border-gray-200 p-4 dark:border-gray-700">
+                        <div class="flex flex-wrap gap-1.5">
+                            <button v-for="action in quickActions" :key="action" type="button" @click="askQuickQuestion(action)"
+                                    :aria-pressed="lastQuestion === action"
+                                    class="min-h-[2.75rem] rounded-full border px-3.5 py-2 text-[13px] font-semibold sm:min-h-[2.25rem] sm:text-xs
+                                           transition duration-200 active:scale-95
+                                           border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-100 hover:shadow-sm
+                                           dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-700
+                                           aria-pressed:bg-gray-100 aria-pressed:border-gray-400 aria-pressed:shadow-sm
+                                           dark:aria-pressed:bg-gray-700 dark:aria-pressed:border-gray-500">
+                                {{ action }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </Transition>
+
+            
+            <button type="button" @click="toggleChat" :aria-expanded="chatOpen" aria-label="Open chat" title="Open chat"
+                    class="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 shadow-lg
+                           transition duration-300 hover:scale-105 hover:bg-gray-100 hover:shadow-xl active:scale-95
+                           dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700">
+                <svg v-if="chatOpen" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" v-html="icons.close"></svg>
+                <svg v-else class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" v-html="icons.chat"></svg>
+            </button>
+        </div>
+    </div>
+
+    
+    <script src="vendor/vue.global.prod.js"></script>
+
+    <script>
+        const { createApp, ref, computed, watch, onMounted, onUnmounted, nextTick } = Vue;
+
+        
+        
+        const app = {
+
+            setup() {
+
+                
+                
+                const navLinks = [
+                    { id: 'home', label: 'Home' },
+                    { id: 'about', label: 'About' },
+                    { id: 'skills', label: 'Skills' },
+                    { id: 'projects', label: 'Projects' },
+                    { id: 'contact', label: 'Contact' }
+                ];
+                const navOpen = ref(false);
+
+                
+                const activeSection = ref('home');
+
+                let sectionObserver = null;
+
+                
+                function observeSections() {
+                    if (sectionObserver) {
+                        sectionObserver.disconnect();
+                        sectionObserver = null;
+                    }
+                    if (typeof IntersectionObserver === 'undefined') return;
+
+                    const navH = parseFloat(
+                        getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+                    ) || 68;
+
+                    sectionObserver = new IntersectionObserver((entries) => {
+                        
+                        
+                        
+                        let best = null;
+                        for (const entry of entries) {
+                            if (!entry.isIntersecting) continue;
+                            if (!best || entry.boundingClientRect.top > best.boundingClientRect.top) {
+                                best = entry;
+                            }
+                        }
+                        if (best) activeSection.value = best.target.id;
+                    }, {
+                        
+                        
+                        
+                        
+                        rootMargin: '-' + navH + 'px 0px -70% 0px',
+                        threshold: 0
+                    });
+
+                    navLinks.forEach((link) => {
+                        const el = document.getElementById(link.id);
+                        if (el) sectionObserver.observe(el);
+                    });
+                }
+
+                
+                function goToSection(id, event) {
+                    event.preventDefault();
+                    
+                    
+                    
+                    activeSection.value = id;
+                    navOpen.value = false;
+
+                    
+                    
+                    
+                    nextTick(() => {
+                        const doc = document.documentElement;
+                        const maxY = Math.max(0, doc.scrollHeight - window.innerHeight);
+
+                        let to = 0;
+                        if (id !== 'home') {
+                            const el = document.getElementById(id);
+                            if (el) {
+                                const pad = parseFloat(getComputedStyle(doc).scrollPaddingTop) || 0;
+                                to = el.getBoundingClientRect().top + window.scrollY - pad;
+                            }
+                        }
+                        window.scrollTo({ top: Math.min(Math.max(0, to), maxY), behavior: 'smooth' });
+                    });
+                }
+
+                
+                const savedTheme = localStorage.getItem('theme');
+                const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const darkMode = ref(savedTheme === 'dark' || (!savedTheme && systemDark));
+
+                function toggleDarkMode() {
+                    
+                    
+                    
+                    
+                    if (document.startViewTransition && !prefersReducedMotion()) {
+                        document.startViewTransition(() => {
+                            darkMode.value = !darkMode.value;
+                        });
+                        return;
+                    }
+
+                    
+                    darkMode.value = !darkMode.value;
+                    document.documentElement.classList.add('theme-transition');
+                    setTimeout(() => document.documentElement.classList.remove('theme-transition'), 240);
+                }
+
+                function prefersReducedMotion() {
+                    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                }
+
+                
+                
+                watch(darkMode, (isDark) => {
+                    document.documentElement.classList.toggle('dark', isDark);
+                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                });
+
+                
+                const icons = {
+                    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+                    moon: '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+                    close: '<path d="M6 6l12 12M18 6L6 18"/>',
+                    menu: '<path d="M3 6h18M3 12h18M3 18h18"/>',
+                    minimize: '<path d="M5 12h14"/>',
+                    chevron: '<path d="M9 6l6 6-6 6"/>',
+                    arrowRight: '<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>',
+                    pin: '<path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+                    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+                    file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/>',
+                    download: '<path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/>',
+                    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+                    briefcase: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/>',
+                    layers: '<path d="m12 3 9 5-9 5-9-5 9-5z"/><path d="m3 13 9 5 9-5"/>',
+                    cap: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/>',
+                    flask: '<path d="M9 3h6"/><path d="M10 3v6.5L4.8 18A2 2 0 0 0 6.5 21h11a2 2 0 0 0 1.7-3L14 9.5V3"/><path d="M7.5 15h9"/>',
+                    award: '<circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1 7.5 4.5-2.5 4.5 2.5-1-7.5"/>',
+                    target: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/>',
+                    link: '<path d="M10.5 13.5a4 4 0 0 0 5.7 0l2.8-2.8a4 4 0 0 0-5.7-5.7L11.9 6.4"/><path d="M13.5 10.5a4 4 0 0 0-5.7 0L5 13.3a4 4 0 0 0 5.7 5.7l1.4-1.4"/>',
+                    chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5.4A8 8 0 1 1 21 12z"/>',
+                    grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+                    image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m4 17 5-5 4.5 4.5L16 14l4 4"/>',
+                    send: '<path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5 21 3z"/>',
+                    linkedin: '<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V16"/><path d="M8 7.8v.01"/><path d="M12 16v-3.2a2.3 2.3 0 0 1 4.5 0V16"/>',
+                    github: '<path d="m9 18-5-6 5-6"/><path d="m15 6 5 6-5 6"/>',
+                    instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/>',
+                    facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>'
+                };
+
+                
+                const profile = {
+                    name: 'Shan Lee Garmino',
+                    role: 'BSIT STUDENT',
+                    tagline: 'I design and build clean, user-friendly digital experiences through technology and creativity.',
+                    location: 'Dasmarinas, Cavite, Philippines',
+                    photo: 'images/profile.webp',
+                    email: 'shanleegarmino@gmail.com',
+                    resume: 'resume.pdf'
+                };
+
+                
+                const about = {
+                    paragraphs: [
+                        'I am a 3rd-year Bachelor of Science in Information Technology student with a strong interest in UI/UX design and creating user-friendly digital experiences.',
+                        'I enjoy designing interfaces, exploring layouts, and turning ideas into clean and intuitive designs. Through academic and personal projects, I have been developing my skills in UI/UX design while also gaining experience with web development and system-related projects.',
+                        'My goal is to continue improving my design and technical skills, especially in UI/UX, and create digital experiences that are simple, useful, and enjoyable for people to use.'
+                    ]
+                };
+
+                
+                const education = {
+                    school: 'National College of Science and Technology',
+                    location: 'DasmariÃ±as City, Cavite, Philippines',
+                    program: 'Bachelor of Science in Information Technology',
+                    status: '3rd Year Â· Currently Studying',
+                    years: '2024 â€“ Present',
+                    focus: ['Web Development', 'UI/UX Design', 'Database Systems', 'System Development']
+                };
+
+                
+                const previousSchools = [
+                    {
+                        level: 'Senior High School',
+                        school: 'Aklan State University',
+                        strand: 'Science, Technology, Engineering and Mathematics (STEM)',
+                        location: 'Banga, Aklan',
+                        years: '2022 â€“ 2023'
+                    },
+                    {
+                        level: 'Junior High School',
+                        school: 'Aklan Polytechnic College',
+                        
+                        
+                        strand: null,
+                        location: 'Quezon Avenue, Kalibo, Aklan',
+                        years: '2017 â€“ 2021'
+                    }
+                ];
+
+                const timeline = [
+                    { title: 'System Projects', subtitle: 'Web Development Â· System Development' },
+                    { title: 'UI/UX Design',       subtitle: 'Figma Â· User Interface Â· Responsive Design' },
+                    { title: 'Self-Learning',      subtitle: 'Vue.js Â· Tailwind CSS Â· Web Development' }
+                ];
+
+                
+                const skills = [
+                    { name: 'HTML',        group: 'Comfortable with' },
+                    { name: 'CSS',         group: 'Comfortable with' },
+                    { name: 'Vue.js',      group: 'Comfortable with' },
+                    { name: 'Tailwind CSS',group: 'Comfortable with' },
+                    { name: 'Figma',       group: 'Comfortable with' },
+                    { name: 'UI/UX Design',group: 'Comfortable with' },
+
+                    { name: 'Python',              group: 'Currently learning' },
+                    { name: 'Database Fundamentals',group: 'Currently learning' },
+                    { name: 'System Analysis',     group: 'Currently learning' },
+                    { name: 'Responsive Web Design',group: 'Currently learning' },
+
+                    { name: 'VS Code', group: 'Tools I use' },
+                    { name: 'GitHub',  group: 'Tools I use' },
+                    { name: 'Canva',   group: 'Tools I use' }
+                ];
+
+                
+                const skillGroups = computed(() => {
+                    const order = ['Comfortable with', 'Currently learning', 'Tools I use'];
+                    return order.map((title) => ({
+                        title: title,
+                        items: skills.filter((s) => s.group === title).map((s) => s.name)
+                    }));
+                });
+
+                
+                const certifications = [
+                    { title: 'Web Development', subtitle: 'Academic / Self-Learning' },
+                    { title: 'UI/UX Design', subtitle: 'Figma / Academic Project' },
+                    { title: 'Programming Fundamentals', subtitle: 'Java / Web Development' }
+                ];
+
+                
+                
+                
+                const projectGroups = computed(() => [
+                    {
+                        title: 'System Projects',
+                        icon: 'layers',
+                        items: projects.filter((p) => p.kind !== 'design')
+                    },
+                    {
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        title: 'Design Projects',
+                        icon: 'flask',
+                        items: projects.filter((p) => p.kind === 'design')
+                    }
+                ]);
+
+                
+                const PROJECTS_SHOWN = 2;
+                const expandedGroups = ref({});
+
+                const hasMoreProjects = (group) => group.items.length > PROJECTS_SHOWN;
+                const shownProjects = (group) => group.items.slice(0, PROJECTS_SHOWN);
+                const hiddenProjects = (group) => group.items.slice(PROJECTS_SHOWN);
+                const isGroupExpanded = (title) => !!expandedGroups.value[title];
+
+                function toggleProjectGroup(title) {
+                    expandedGroups.value = {
+                        ...expandedGroups.value,
+                        [title]: !expandedGroups.value[title]
+                    };
+                }
+
+                const projects = [
+                    {
+                        title: 'VeganBrew',
+                        imageName: 'images/veganbrew.webp',
+                        image: 'images/veganbrew.webp',
+                        summary: 'A website for a vegan coffee shop, with a homepage, menu, about, contact, and login and register pages.',
+                        tech: ['PHP', 'HTML', 'JavaScript'],
+                        role: 'Built the pages in HTML and styled the layout, then added interactive parts with JavaScript and handled the forms with PHP.',
+                        learned: 'How PHP connects an HTML page to a database, and how to make a navigation menu and forms work smoothly on different screen sizes.'
+                    },
+                    {
+                        title: 'SHS Enrollment System',
+                        imageName: 'images/enrollment.webp',
+                        image: 'images/enrollment.webp',
+                        summary: 'A Senior High School enrollment website where students can apply online, pick a strand, and track their application status.',
+                        tech: ['HTML', 'CSS', 'JavaScript'],
+                        role: 'Built the pages and the application form, and worked on storing applicant records and the strand choices.',
+                        learned: 'How to break a real enrollment process into clear steps, and how to show an applicant where their application is at a glance.'
+                    },
+                    {
+                        title: 'Bake Bliss',
+                        imageName: 'images/bake-bliss.webp',
+                        image: 'images/bake-bliss.webp',
+                        
+                        
+                        
+                        
+                        fallbackImage: 'images/bake-bliss-splash.png',
+                        phone: true,
+                        summary: 'A mobile app design for a bakery ordering service, covering the full customer journey from logging in and browsing the menu to viewing a product and checking out.',
+                        tech: ['Figma', 'UI/UX', 'Mobile UI'],
+                        role: 'Designed the app screens in Figma: the splash and login screens, the home menu, the product list, the product details page, and the profile screen.',
+                        learned: 'How to design a mobile app flow screen by screen, and how to keep a whole set of screens consistent in colour, spacing and components.',
+                        link: 'https://www.figma.com/design/e35VOH9pPkr9rz5RZGO9AZ/GARMINO_SHANLEEKIAN_31A1?node-id=0-1&t=dVuiiGPuEfhinf26-1',
+                        kind: 'design',
+                        
+                        
+                        
+                        accentA: '#FA8C99',
+                        accentB: '#E8637A'
+                    },
+                    {
+                        title: 'Komiks',
+                        imageName: 'images/komiks-hero.webp',
+                        image: 'images/komiks-hero.webp',
+                        
+                        
+                        fallbackImage: 'images/komiks.webp',
+                        url: 'komiks.com',
+                        browser: true,
+                        summary: 'A dark-themed website design for reading comics, with a comic library, category browsing, search, comic details, and a reading view.',
+                        tech: ['Figma', 'UI/UX', 'Web Design'],
+                        role: 'Designed the website screens in Figma: the homepage, the comic library, category browsing, search and filters, comic details, and the cart and checkout flow.',
+                        learned: 'How to design a store where a lot of cover art has to stay readable, and how to keep a dark palette comfortable to look at for a long time.',
+                        link: 'https://www.figma.com/design/d6zsqxJEd2p68LhrSq8wkR/GARMINO-BAUTISTA?node-id=0-1&p=f',
+                        kind: 'design'
+                    },
+                    {
+                        
+                        
+                        
+                        title: 'BOOKLY',
+                        imageName: 'images/bookly.webp',
+                        image: 'images/bookly.webp',
+                        phone: true,
+                        summary: 'A mobile app design for a bookstore, opening on a branded splash screen that invites the reader into their digital shelf.',
+                        tech: ['Figma', 'UI/UX', 'Mobile UI'],
+                        link: 'https://www.figma.com/design/i0IkRvWO9Gpbq644PlJZsn/GARMINO?node-id=1-6',
+                        kind: 'design',
+                        
+                        
+                        accentA: '#D99B7F',
+                        accentB: '#A56F63'
+                    },
+                    {
+                        title: 'MEALDASH',
+                        imageName: 'images/mealdash.webp',
+                        image: 'images/mealdash.webp',
+                        phone: true,
+                        summary: 'A mobile app design for a food ordering service, opening on a branded splash screen.',
+                        tech: ['Figma', 'UI/UX', 'Mobile UI'],
+                        link: 'https://www.figma.com/design/mzJLXKJIkGgznHMh7xUpF2/GARMINOO?node-id=0-1',
+                        kind: 'design',
+                        
+                        
+                        
+                        accentA: '#A4CC41',
+                        accentB: '#F4E437'
+                    }
+                ];
+
+                
+                function auroraStyle(project) {
+                    if (!project.accentA || !project.accentB) return null;
+                    return {
+                        '--aurora-a-rgb': hexToRgbChannels(project.accentA),
+                        '--aurora-b-rgb': hexToRgbChannels(project.accentB)
+                    };
+                }
+
+                
+                
+                
+                
+                
+                
+                function hexToRgbChannels(hex) {
+                    const h = String(hex).trim().replace('#', '');
+                    const full = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+                    const n = parseInt(full, 16);
+                    if (full.length !== 6 || Number.isNaN(n)) return '255 255 255';
+                    return `${(n >> 16) & 255} ${(n >> 8) & 255} ${n & 255}`;
+                }
+
+                function hasAurora(project) {
+                    return !!(project.accentA && project.accentB);
+                }
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                const schoolAccent = { accentA: '#F0A81E', accentB: '#FFD84D' };
+
+                
+                const showGallery = ref(false);
+
+                const gallery = [
+                    { title: 'Bake Bliss App Design', image: 'images/bake-bliss.webp', fallbackImage: 'images/bake-bliss-splash.png', phone: true },
+                    { title: 'Komiks Homepage', image: 'images/komiks-hero.webp', fallbackImage: 'images/komiks.webp', url: 'komiks.com', browser: true },
+                    { title: 'VeganBrew Website', image: 'images/veganbrew.webp' },
+                    { title: 'SHS Enrollment System', image: 'images/enrollment.webp' },
+                    { title: 'Figma Mobile Design', image: '' },
+                    { title: 'Figma Website Design', image: '' }
+                ];
+
+                const brokenImages = ref([]);
+
+                
+                
+                const photoBroken = ref(false);
+
+                
+                
+                
+                const schoolLogoBroken = ref(false);
+
+                
+                
+                function onImageError(item) {
+                    if (item.fallbackImage && item.image !== item.fallbackImage) {
+                        item.image = item.fallbackImage;
+                    } else {
+                        brokenImages.push(item.title);
+                    }
+                }
+
+                
+                const selectedProject = ref(null);
+
+                
+                function hasProjectLink(project) {
+                    return !!(project && project.link && project.link !== '#');
+                }
+
+                
+                let overlayInHistory = false;
+
+                function pushOverlayHistory() {
+                    if (overlayInHistory) return;
+                    overlayInHistory = true;
+                    history.pushState({ overlay: true }, '');
+                }
+
+                
+                
+                
+                function popOverlayHistory() {
+                    if (!overlayInHistory) return;
+                    overlayInHistory = false;
+                    history.back();
+                }
+
+                function dismissOverlays() {
+                    
+                    
+                    resumeOpen.value = false;
+                    selectedProject.value = null;
+                    document.body.style.overflow = '';
+                }
+
+                function onPopState() {
+                    if (!overlayInHistory) return;
+                    overlayInHistory = false;
+                    dismissOverlays();
+                }
+
+                function openProject(project) {
+                    selectedProject.value = project;
+                    
+                    document.body.style.overflow = 'hidden';
+                    pushOverlayHistory();
+                }
+
+                function closeProject() {
+                    selectedProject.value = null;
+                    document.body.style.overflow = '';
+                    popOverlayHistory();
+                }
+
+                function onKeydown(e) {
+                    if (e.key !== 'Escape') return;
+                    if (resumeOpen.value) closeResume();
+                    else if (selectedProject.value) closeProject();
+                    else if (navOpen.value) navOpen.value = false;
+                }
+
+                
+                const resumeOpen = ref(false);
+
+                
+                
+                
+                const resumeFileName = 'Shan-Lee-Garmino-Resume.pdf';
+
+                
+                
+                
+                
+                
+                const resumePreviewImage = 'images/resume-preview.webp';
+                const resumeImageBroken = ref(false);
+
+                
+                
+                
+                const resumeViewerSrc = profile.resume + '#view=Fit&toolbar=0';
+
+                
+
+                function openResume() {
+                    resumeOpen.value = true;
+                    
+                    document.body.style.overflow = 'hidden';
+                    pushOverlayHistory();
+                }
+
+                function closeResume() {
+                    resumeOpen.value = false;
+                    
+                    if (!selectedProject.value) document.body.style.overflow = '';
+                    popOverlayHistory();
+                }
+
+                
+                const goals = [
+                    'Build a strong career in IT and design through continuous learning and hands-on experience.',
+                    'Improve my skills in web development, UI/UX design, and software development.',
+                    'Create practical digital solutions that are useful, accessible, and visually appealing.'
+                ];
+
+                
+                
+                const mailLink = 'mailto:' + profile.email
+                    + '?subject=' + encodeURIComponent('Portfolio enquiry');
+
+                
+                const gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1'
+                    + '&to=' + encodeURIComponent(profile.email)
+                    + '&su=' + encodeURIComponent('Portfolio enquiry')
+                    + '&body=' + encodeURIComponent(
+                        'Hi Shan,\n\nI found your portfolio and I would like to get in touch.\n\n');
+
+                const socials = [
+                    { name: 'GitHub', icon: 'github', url: 'https://github.com/shanlee16' },
+                    { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/shanlee.garmino' },
+                    { name: 'Email', icon: 'mail', url: gmailLink }
+                ];
+
+                
+                const contact = {
+                    text: 'I am currently open to internship opportunities, academic collaborations, and projects where I can improve my skills and contribute.'
+                };
+
+                
+                const contactOptions = [
+                    {
+                        label: 'Message Me', value: 'Messenger', icon: 'chat',
+                        link: 'https://m.me/yourusername', newTab: true
+                    },
+                    {
+                        label: 'Download Resume', value: 'PDF', icon: 'download',
+                        link: 'resume.pdf', newTab: false, download: 'Shan-Lee-Garmino-Resume.pdf'
+                    }
+                ];
+
+                
+                const letterMax = 1000;
+                const letterName = ref('');
+                const letterEmail = ref('');
+                const letterMessage = ref('');
+                const addressCopied = ref(false);
+
+                
+                const canSendLetter = computed(() => letterMessage.value.trim().length > 0);
+
+                
+                const nowTick = ref(Date.now());
+                let clockTimer = null;
+
+                
+                
+                onMounted(() => {
+                    clockTimer = setInterval(() => { nowTick.value = Date.now(); }, 1000);
+                });
+
+                onUnmounted(() => {
+                    if (clockTimer) clearInterval(clockTimer);
+                });
+
+                
+                
+                const letterTime = computed(() => new Intl.DateTimeFormat('en-US', {
+                    timeZone: 'Asia/Manila',
+                    hour: 'numeric', minute: '2-digit', hour12: true
+                }).format(new Date(nowTick.value)));
+
+                
+                const letterDate = computed(() => new Intl.DateTimeFormat('en-GB', {
+                    timeZone: 'Asia/Manila',
+                    weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
+                }).format(new Date(nowTick.value)));
+
+                const letterSubject = computed(() => {
+                    const who = letterName.value.trim();
+                    return who ? 'Portfolio enquiry from ' + who : 'Portfolio enquiry';
+                });
+
+                const letterBody = computed(() => {
+                    const lines = ['Hi Shan,', '', letterMessage.value.trim() || '(no message)', ''];
+                    const who = letterName.value.trim();
+                    if (who) lines.push('â€” ' + who);
+                    const mail = letterEmail.value.trim();
+                    if (mail) lines.push(mail);
+                    return lines.join('\n');
+                });
+
+                
+                const letterReviewSubject = computed(() => {
+                    const who = letterName.value.trim();
+                    return who ? 'Letter from ' + who : 'Letter';
+                });
+
+                
+                function gmailComposeUrl(subject, body) {
+                    return 'https://mail.google.com/mail/?view=cm&fs=1'
+                        + '&to=' + encodeURIComponent(profile.email)
+                        + '&su=' + encodeURIComponent(subject)
+                        + '&body=' + encodeURIComponent(body);
+                }
+
+                
+                function openInGmail() {
+                    if (!canSendLetter.value) return;
+                    window.open(gmailComposeUrl(letterSubject.value, letterBody.value), '_blank', 'noopener');
+                }
+
+                
+                function openLetterForReview() {
+                    if (!canSendLetter.value) return;
+                    window.open(gmailComposeUrl(letterReviewSubject.value, letterBody.value), '_blank', 'noopener');
+                }
+
+                async function copyAddress() {
+                    try {
+                        await navigator.clipboard.writeText(profile.email);
+                    } catch (e) {
+                        
+                        
+                        
+                        const ta = document.createElement('textarea');
+                        ta.value = profile.email;
+                        ta.setAttribute('readonly', '');
+                        ta.style.cssText = 'position:fixed;top:0;left:-9999px;opacity:0';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        try { document.execCommand('copy'); } catch (e2) {  }
+                        ta.remove();
+                    }
+                    addressCopied.value = true;
+                    setTimeout(() => { addressCopied.value = false; }, 2000);
+                }
+
+                
+                
+                
+                
+                
+                
+                
+                const realSocials = computed(() => socials.filter(s => s.url && s.url !== '#'));
+
+                
+                const chatOpen = ref(false);
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                const typeLines = ref([]);
+                const typeCarets = ref([]);
+                let typeRaf = 0;
+                let typeTimer = 0;
+                let typeStartAt = 0;
+                let typeRun = 0;
+
+                const TYPE_LEAD = 400;    
+                const TYPE_TAIL = 1600;   
+                const TYPE_GAP = 320;     
+                const TYPE_MS = 2880;     
+
+                function setTypeLine(el, index) {
+                    if (el) typeLines.value[index] = el;
+                }
+
+                function setTypeCaret(el, index) {
+                    if (el) typeCarets.value[index] = el;
+                }
+
+                
+                
+                
+                
+                
+                function typePlan() {
+                    const lines = typeLines.value.filter(Boolean);
+                    if (!lines.length) return [];
+                    const counts = lines.map(el => (el.textContent.trim().length || 1));
+                    let cursor = TYPE_LEAD;
+                    return lines.map((el, i) => {
+                        const slot = { el, caret: typeCarets.value[i], chars: counts[i], start: cursor, end: cursor + TYPE_MS };
+                        cursor = slot.end + TYPE_GAP;
+                        return slot;
+                    });
+                }
+
+                function typeTick() {
+                    typeRaf = 0;
+                    const plan = typePlan();
+                    if (!plan.length) return;
+                    const elapsed = performance.now() - typeStartAt;
+                    const last = plan[plan.length - 1];
+
+                    for (const slot of plan) {
+                        const local = elapsed - slot.start;
+                        const span = slot.end - slot.start;
+                        let typed = 0;
+                        if (local > 0) typed = local >= span ? slot.chars : Math.floor(local / span * slot.chars);
+                        const pct = (1 - typed / slot.chars) * 100;
+                        
+                        
+                        const clip = 'inset(0 ' + pct.toFixed(2) + '% 0 0)';
+                        if (slot.el.style.clipPath !== clip) slot.el.style.clipPath = clip;
+
+                        if (slot.caret) {
+                            
+                            
+                            const active = local > 0 && local <= span + TYPE_TAIL;
+                            const done = local > span;
+                            slot.caret.style.opacity = (active && !done) ? '1' : '0';
+                            if (active) {
+                                const ratio = Math.min(1, Math.max(0, local / span));
+                                slot.caret.style.transform = 'translateX(' + (ratio * slot.el.getBoundingClientRect().width).toFixed(1) + 'px)';
+                            }
+                        }
+                    }
+
+                    if (elapsed < last.end + TYPE_TAIL) {
+                        typeRaf = requestAnimationFrame(typeTick);
+                    } else {
+                        finishTypewriter(plan);
+                    }
+                }
+
+                
+                
+                
+                
+                
+                
+                
+                function finishTypewriter(plan) {
+                    if (typeRaf) cancelAnimationFrame(typeRaf);
+                    typeRaf = 0;
+                    if (typeTimer) clearTimeout(typeTimer);
+                    typeTimer = 0;
+                    const slots = plan || typeLines.value.filter(Boolean).map((el, i) => ({ el, caret: typeCarets.value[i] }));
+                    if (!slots.length) return;
+                    const last = slots[slots.length - 1];
+                    slots.forEach(slot => { if (slot.el) slot.el.style.clipPath = ''; });
+                    slots.forEach(slot => {
+                        if (slot.caret) slot.caret.style.opacity = slot === last ? '1' : '0';
+                    });
+                    if (last.caret && last.el) {
+                        last.caret.style.transform = 'translateX(' + last.el.getBoundingClientRect().width.toFixed(1) + 'px)';
+                    }
+                }
+
+                function stopTypewriter() {
+                    if (typeRaf) cancelAnimationFrame(typeRaf);
+                    if (typeTimer) clearTimeout(typeTimer);
+                    typeRaf = 0;
+                    typeTimer = 0;
+                    typeRun++;
+                    typeLines.value.forEach(el => { if (el) el.style.clipPath = ''; });
+                    typeCarets.value.forEach(el => { if (el) { el.style.opacity = ''; el.style.transform = ''; } });
+                }
+
+                function startTypewriter() {
+                    stopTypewriter();
+                    const run = typeRun;
+                    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                    if (!typeLines.value.filter(Boolean).length) return;
+                    
+                    
+                    const go = () => {
+                        if (run !== typeRun) return;
+                        typeStartAt = performance.now();
+                        
+                        
+                        typeTimer = setTimeout(() => {
+                            if (run === typeRun) finishTypewriter();
+                        }, TYPE_LEAD + TYPE_MS * 2 + TYPE_GAP + TYPE_TAIL + 400);
+                        typeRaf = requestAnimationFrame(typeTick);
+                    };
+                    if (document.fonts && document.fonts.ready) {
+                        document.fonts.ready.then(go).catch(go);
+                    } else {
+                        requestAnimationFrame(go);
+                    }
+                }
+
+                
+                
+                
+                
+                const contactTyped = ref(0);
+                const beginTyping = () => {
+                    stopTypewriter();
+                    contactTyped.value++;
+                    
+                    
+                    
+                    nextTick(startTypewriter);
+                };
+                watch(activeSection, (section) => {
+                    if (section === 'contact') beginTyping();
+                });
+                
+                
+                
+                
+                
+                onMounted(() => {
+                    if (activeSection.value === 'contact') beginTyping();
+                });
+                onUnmounted(stopTypewriter);
+
+                const newMessage = ref('');
+                const typing = ref(false);
+                const chatBox = ref(null);
+                const avatarBroken = ref(false);   
+                const quickActions = ['My Skills', 'My Projects', 'Contact Me'];
+                
+                const lastQuestion = ref('');
+                let messageId = 0;
+
+                function now() {
+                    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                }
+
+                const messages = ref([
+                    {
+                        id: ++messageId,
+                        from: 'bot',
+                        text: "Hi! ðŸ‘‹ I'm Shan Lee. Ask me about my projects, skills, or experience.",
+                        time: now()
+                    }
+                ]);
+
+                
+                function getReply(text) {
+                    const q = text.toLowerCase();
+
+                    if (q.includes('skill') || q.includes('tech') || q.includes('stack')) {
+                        return 'I am comfortable with HTML, CSS, Vue.js, Tailwind CSS, Figma and UI/UX design, and I am currently learning Python, database fundamentals and system analysis.';
+                    }
+                    if (q.includes('project')) {
+                        return 'I have built a VeganBrew coffee shop website, an SHS enrollment system, the Bake Bliss bakery app, and the Komiks comic store website. You can open each one under Selected Projects.';
+                    }
+                    if (q.includes('contact') || q.includes('email') || q.includes('talk') || q.includes('hire')) {
+                        return 'You can contact me through the Let us Work Together section, or email me directly. I am open to internships and academic collaborations.';
+                    }
+                    if (q.includes('educat') || q.includes('study') || q.includes('school') || q.includes('background') || q.includes('about')) {
+                        return 'I am a 3rd-year BS Information Technology student in the Philippines. I learn through school projects, personal projects, and self-learning.';
+                    }
+                    if (q.includes('design') || q.includes('ui') || q.includes('ux') || q.includes('figma')) {
+                        return 'I design interfaces in Figma and Canva, and I like turning those designs into working websites with clean, responsive layouts.';
+                    }
+                    if (q.includes('goal') || q.includes('future') || q.includes('career')) {
+                        return 'My goal is to build a strong career in IT and design through continuous learning and hands-on experience.';
+                    }
+                    if (q.includes('hi') || q.includes('hello') || q.includes('hey')) {
+                        return 'Hello! ðŸ‘‹ I am Shan Lee Garmino, a 3rd-year BSIT student. Feel free to ask about my skills, my projects, or my background.';
+                    }
+                    if (q.includes('thank')) {
+                        return 'You are welcome! ðŸ˜Š Good luck, and feel free to ask me anything else.';
+                    }
+                    return 'Thanks for your message! I am still learning and improving every day. You can ask me about my skills, my projects, or my background.';
+                }
+
+                function scrollChatToBottom() {
+                    nextTick(() => {
+                        if (chatBox.value) chatBox.value.scrollTop = chatBox.value.scrollHeight;
+                    });
+                }
+
+                function toggleChat() {
+                    chatOpen.value = !chatOpen.value;
+                    if (chatOpen.value) scrollChatToBottom();
+                }
+
+                
+                function askQuickQuestion(label) {
+                    const questions = {
+                        'My Skills': 'What are your skills?',
+                        'My Projects': 'Tell me about your projects',
+                        'Contact Me': 'How can I contact you?'
+                    };
+                    newMessage.value = questions[label] || label;
+                    lastQuestion.value = label;
+                    sendMessage();
+                }
+
+                function sendMessage() {
+                    const text = newMessage.value.trim();
+                    if (!text) return;
+
+                    messages.value.push({ id: ++messageId, from: 'user', text: text, time: now() });
+                    newMessage.value = '';
+                    typing.value = true;
+                    scrollChatToBottom();
+
+                    
+                    setTimeout(() => {
+                        messages.value.push({ id: ++messageId, from: 'bot', text: getReply(text), time: now() });
+                        typing.value = false;
+                        scrollChatToBottom();
+                    }, 700);
+                }
+
+                
+                
+                function syncNavHeight() {
+                    const header = document.querySelector('header');
+                    if (!header) return;
+                    const h = Math.round(header.getBoundingClientRect().height);
+                    if (!h || h === syncNavHeight.last) return;
+                    syncNavHeight.last = h;
+                    document.documentElement.style.setProperty('--nav-h', h + 'px');
+
+                    
+                    
+                    
+                    
+                    observeSections();
+                }
+
+                
+                
+                
+                
+                function onResize() {
+                    syncNavHeight();
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    measureScrollProgress();
+                    if (!chatOpen.value) return;
+                    nextTick(() => scrollChatToBottom());
+                }
+
+                
+                const scrollProgress = ref(0);
+                let progressRaf = 0;
+
+                
+                function measureScrollProgress() {
+                    const doc = document.documentElement;
+                    const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+                    const pct = Math.min(1, Math.max(0, window.scrollY / max));
+                    const next = Math.round(pct * 1000) / 1000;
+                    if (next !== scrollProgress.value) scrollProgress.value = next;
+                    progressRaf = 0;
+                }
+
+                function onScroll() {
+                    if (progressRaf) return;
+                    progressRaf = requestAnimationFrame(measureScrollProgress);
+                }
+
+                onMounted(() => {
+                    window.addEventListener('keydown', onKeydown);
+                    window.addEventListener('resize', onResize);
+                    window.addEventListener('popstate', onPopState);
+                    window.addEventListener('scroll', onScroll, { passive: true });
+
+                    
+                    
+                    
+                    nextTick(() => {
+                        syncNavHeight();
+                        
+                        
+                        
+                        
+                        observeSections();
+                        
+                        
+                        
+                        
+                        
+                        measureScrollProgress();
+                    });
+
+                    
+                    
+                    
+                    
+                    if (document.fonts && document.fonts.ready) {
+                        document.fonts.ready.then(syncNavHeight).catch(() => {});
+                    }
+
+                    scrollChatToBottom();
+                });
+
+                
+                onUnmounted(() => {
+                    window.removeEventListener('keydown', onKeydown);
+                    window.removeEventListener('resize', onResize);
+                    window.removeEventListener('popstate', onPopState);
+                    
+                    
+                    
+                    
+                    window.removeEventListener('scroll', onScroll);
+                    
+                    
+                    if (progressRaf) {
+                        cancelAnimationFrame(progressRaf);
+                        progressRaf = 0;
+                    }
+                    if (sectionObserver) {
+                        sectionObserver.disconnect();
+                        sectionObserver = null;
+                    }
+                });
+
+                return {
+                    
+                    navLinks, navOpen, activeSection, goToSection, contactTyped, beginTyping,
+                    typeLines, typeCarets, setTypeLine, setTypeCaret, startTypewriter, stopTypewriter,
+                    hasAurora, auroraStyle, hasProjectLink,
+                    scrollProgress,
+                    
+                    darkMode, toggleDarkMode,
+                    
+                    icons, profile, about, education, previousSchools, timeline, skills, skillGroups, certifications,
+                    letterMax, letterName, letterEmail, letterMessage, letterTime, letterDate, letterSubject, letterReviewSubject, letterBody, canSendLetter,
+                    addressCopied, openInGmail, openLetterForReview, copyAddress, realSocials,
+                    goals, socials, mailLink, gmailLink, contact, contactOptions, projects, projectGroups, gallery, showGallery, brokenImages, onImageError, photoBroken, schoolLogoBroken, schoolAccent,
+                    
+                    hasMoreProjects, shownProjects, hiddenProjects, isGroupExpanded, toggleProjectGroup,
+                    
+                    selectedProject, openProject, closeProject,
+                    
+                    resumeOpen, resumeFileName, resumeViewerSrc, resumePreviewImage, resumeImageBroken,
+                    openResume, closeResume,
+                    
+                    chatOpen, newMessage, typing, chatBox, messages, avatarBroken,
+                    quickActions, lastQuestion, toggleChat, sendMessage, askQuickQuestion
+                };
+            }
+        };
+
+        const appOptions = app;
+
+        
+
+        createApp(appOptions).mount('#app');
+
+        
+        window.addEventListener('load', function () {
+            window.dispatchEvent(new Event('scroll'));
+        });
+
+        
+        setTimeout(function () {
+            if (document.querySelector('[class*="taos:"]') &&
+                !document.querySelector('.taos-init')) {
+                document.documentElement.classList.remove('js');
+            }
+        }, 2500);
+
+        
+        (function strandedReveal() {
+            function sweep() {
+                var vh = window.innerHeight;
+                var list = document.querySelectorAll('.taos-init');
+                for (var i = 0; i < list.length; i++) {
+                    var el = list[i];
+                    var saved = el.dataset.taosClass;
+                    if (!saved) continue;
+                    var box = el.getBoundingClientRect();
+                    if (box.bottom < 0 || box.top > vh) continue;
+                    if (getComputedStyle(el).opacity !== '0') continue;
+                    el.className = saved;
+                }
+            }
+
+            
+            [150, 350, 550, 800, 1200, 1800, 2600].forEach(function (ms) {
+                setTimeout(sweep, ms);
+            });
+
+            
+            var pending;
+            window.addEventListener('resize', function () {
+                clearTimeout(pending);
+                pending = setTimeout(function () {
+                    sweep();
+                    setTimeout(sweep, 500);
+                }, 450);
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+# Nothing in this project is a build artefact - the site is plain static files
+# that Netlify serves as they are. So there is no dist/, no build output and no
+# node_modules here. These rules are here so that nothing unwanted gets added
+# later, and so the repository stays clean if you open it in an editor.
+
+# Secrets and local config. None of these exist in this project today; the rule
+# is here so that if you ever add one it cannot be committed by accident.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+.npmrc
+.netrc
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and caches
+*.log
+.cache/
+.parcel-cache/
+.eslintcache
+
+# ---------------------------------------------------------------------------
+# The eight original screenshots below were superseded by .webp versions and
+# nothing in index.html points at them any more. They are excluded to keep the
+# repository lean, but they are NOT deleted from your disk - they are still
+# your source files, and every .webp here was made from one of them.
+#
+# NOTE: images/bake-bliss-splash.png and images/komiks.webp are NOT in this
+# list, on purpose. Those two are still referenced, as the fallback image for
+# Bake Bliss and Komiks - if the .webp ever fails to load, the browser falls
+# back to them. Excluding them would leave a 404 in the deployed site.
+#
+# If you ever want the originals in the repository, delete the block between
+# the two lines, then:  git add -A && git commit
+# ---------------------------------------------------------------------------
+
+images/komiks-hero.png
+images/mealdash-splash.png
+images/bookly-splash.png
+images/veganbrew.jpg
+images/enrollment.jpg
+images/ncst-logo.png
+images/profile.jpg
+images/resume-preview.jpg
+# ---------------------------------------------------------------------------
