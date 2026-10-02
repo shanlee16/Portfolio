@@ -2232,10 +2232,10 @@
                 let typeStartAt = 0;
                 let typeRun = 0;
 
-                const TYPE_LEAD = 400;    
-                const TYPE_TAIL = 1600;   
-                const TYPE_GAP = 320;     
-                const TYPE_MS = 2880;     
+                const TYPE_LEAD = 260;    
+                const TYPE_TAIL = 900;    
+                const TYPE_GAP = 220;     
+                const TYPE_CHAR = 65;     
 
                 function setTypeLine(el, index) {
                     if (el) typeLines.value[index] = el;
@@ -2256,7 +2256,10 @@
                     const counts = lines.map(el => (el.textContent.trim().length || 1));
                     let cursor = TYPE_LEAD;
                     return lines.map((el, i) => {
-                        const slot = { el, caret: typeCarets.value[i], chars: counts[i], start: cursor, end: cursor + TYPE_MS };
+                        const span = Math.max(220, counts[i] * TYPE_CHAR);
+                        let w = el.__twW;
+                        if (w === undefined) w = el.__twW = el.getBoundingClientRect().width;
+                        const slot = { el, caret: typeCarets.value[i], chars: counts[i], start: cursor, end: cursor + span, w: w };
                         cursor = slot.end + TYPE_GAP;
                         return slot;
                     });
@@ -2288,7 +2291,7 @@
                             slot.caret.style.opacity = (active && !done) ? '1' : '0';
                             if (active) {
                                 const ratio = Math.min(1, Math.max(0, local / span));
-                                slot.caret.style.transform = 'translateX(' + (ratio * slot.el.getBoundingClientRect().width).toFixed(1) + 'px)';
+                                slot.caret.style.transform = 'translateX(' + (ratio * slot.w).toFixed(1) + 'px)';
                             }
                         }
                     }
@@ -2346,9 +2349,11 @@
                         typeStartAt = performance.now();
                         
                         
+                        const plan = typePlan();
+                        const total = plan.length ? plan[plan.length - 1].end + TYPE_TAIL + 400 : TYPE_LEAD + TYPE_TAIL + 400;
                         typeTimer = setTimeout(() => {
                             if (run === typeRun) finishTypewriter();
-                        }, TYPE_LEAD + TYPE_MS * 2 + TYPE_GAP + TYPE_TAIL + 400);
+                        }, total);
                         typeRaf = requestAnimationFrame(typeTick);
                     };
                     if (document.fonts && document.fonts.ready) {
@@ -2500,6 +2505,7 @@
                 
                 function onResize() {
                     syncNavHeight();
+                    typeLines.value.forEach(el => { if (el) el.__twW = undefined; });
                     
                     
                     
