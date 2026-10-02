@@ -14,7 +14,7 @@
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
-/tailwind.css
+/tailwind.v2.css
   Cache-Control: public, max-age=31536000, immutable
 
 /index.html
