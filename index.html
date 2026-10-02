@@ -153,22 +153,15 @@
         }
 
         
-        ::view-transition-old(root),
-        ::view-transition-new(root) {
-            animation-duration: 250ms;
-            animation-timing-function: var(--ease-smooth);
-        }
-
-        .theme-transition, .theme-transition * {
-            transition-property: background-color, border-color, color, opacity, transform !important;
-            
-            transition-duration: 0.2s, 0.2s, 0.2s, 0.6s, 0.6s !important;
-            transition-timing-function: var(--ease-smooth) !important;
+        html.theme-switch,
+        html.theme-switch *,
+        html.theme-switch *::before,
+        html.theme-switch *::after {
+            transition-property: none !important;
         }
 
         
 
-        
         .proj-collapse {
             display: grid;
             grid-template-rows: 0fr;
@@ -211,12 +204,9 @@
         
         @media (prefers-reduced-motion: reduce) {
             
-            .theme-transition, .theme-transition * { transition: none !important; }
             html { scroll-behavior: auto !important; }
 
             
-            ::view-transition-old(root),
-            ::view-transition-new(root) { animation: none !important; }
 
             
             .taos-init {
@@ -236,13 +226,12 @@
     <link rel="stylesheet" href="tailwind.v2.css">
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-sans antialiased transition-colors duration-500 dark:bg-gray-900 dark:text-gray-50">
+<body class="bg-gray-50 text-gray-900 font-sans antialiased dark:bg-gray-900 dark:text-gray-50">
 
     <div id="app" v-cloak>
 
         
         <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/85 backdrop-blur-md
-                       transition-[background-color,border-color] duration-500
                        dark:border-gray-700 dark:bg-gray-900/85">
             <nav class="mx-auto flex max-w-6xl items-center justify-end gap-3 px-4 py-3 sm:px-6 lg:px-8">
 
@@ -1182,7 +1171,7 @@
         </main>
 
         
-        <footer class="border-t border-gray-200 bg-white transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="border-t border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
             <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
                 <div class="flex flex-col items-center gap-5 sm:flex-row sm:justify-between">
                     <div class="text-center sm:text-left">
@@ -1600,25 +1589,12 @@
                 const darkMode = ref(savedTheme === 'dark' || (!savedTheme && systemDark));
 
                 function toggleDarkMode() {
-                    
-                    
-                    
-                    
-                    if (document.startViewTransition && !prefersReducedMotion()) {
-                        document.startViewTransition(() => {
-                            darkMode.value = !darkMode.value;
-                        });
-                        return;
-                    }
-
-                    
+                    var root = document.documentElement;
+                    root.classList.add('theme-switch');
                     darkMode.value = !darkMode.value;
-                    document.documentElement.classList.add('theme-transition');
-                    setTimeout(() => document.documentElement.classList.remove('theme-transition'), 240);
-                }
-
-                function prefersReducedMotion() {
-                    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    setTimeout(function () {
+                        root.classList.remove('theme-switch');
+                    }, 0);
                 }
 
                 
