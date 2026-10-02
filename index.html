@@ -9,7 +9,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Shan Lee Garmino | BSIT Student</title>
-    <meta name="description" content="Portfolio of Shan Lee Garmino - 3rd-year BS Information Technology student and UI/UX design student from the Philippines.">
+    <meta name="description" content="Shan Lee Garmino, 3rd-year BSIT student in Dasmariñas, Cavite. Websites I built and Figma screens I designed, with notes on what each one taught me.">
     <meta name="author" content="Shan Lee Garmino">
     <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
@@ -635,7 +635,7 @@
                         Selected Projects
                     </h2>
                     <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                        Academic and personal projects, split into systems I built and UI/UX designs I made.
+                        Six so far. Two are working websites, four are Figma designs.
                     </p>
 
                     
@@ -1664,7 +1664,7 @@
                 const profile = {
                     name: 'Shan Lee Garmino',
                     role: 'BSIT STUDENT',
-                    tagline: 'I design and build clean, user-friendly digital experiences through technology and creativity.',
+                    tagline: 'I build websites and design app screens in Figma. Most of what I know, I picked up from school projects.',
                     location: 'Dasmarinas, Cavite, Philippines',
                     photo: 'images/profile.webp',
                     email: 'shanleegarmino@gmail.com',
@@ -1674,9 +1674,9 @@
                 
                 const about = {
                     paragraphs: [
-                        'I am a 3rd-year Bachelor of Science in Information Technology student with a strong interest in UI/UX design and creating user-friendly digital experiences.',
-                        'I enjoy designing interfaces, exploring layouts, and turning ideas into clean and intuitive designs. Through academic and personal projects, I have been developing my skills in UI/UX design while also gaining experience with web development and system-related projects.',
-                        'My goal is to continue improving my design and technical skills, especially in UI/UX, and create digital experiences that are simple, useful, and enjoyable for people to use.'
+                        'I am a 3rd-year BS Information Technology student at the National College of Science and Technology in Dasmariñas City, Cavite. I split my time between writing code and designing screens in Figma.',
+                        'Almost everything on this page came out of class — a coffee shop website, an enrollment system, and four Figma app designs. I work mostly in HTML, CSS and JavaScript, and I have been using Vue and Tailwind on my own projects to get past the basics.',
+                        'I still have not decided what to specialise in. I keep leaning towards UI/UX because bad layouts annoy me more than slow code does, but I do not want to drop the backend side yet — PHP and databases are coming up in school and I would rather actually understand them than just design around them.'
                     ]
                 };
 
@@ -1824,7 +1824,7 @@
                         
                         fallbackImage: 'images/bake-bliss-splash.png',
                         phone: true,
-                        summary: 'A mobile app design for a bakery ordering service, covering the full customer journey from logging in and browsing the menu to viewing a product and checking out.',
+                        summary: 'A mobile app design for a bakery ordering service — login, the menu, the product list, a product page, and checkout, all designed screen by screen in Figma.',
                         tech: ['Figma', 'UI/UX', 'Mobile UI'],
                         role: 'Designed the app screens in Figma: the splash and login screens, the home menu, the product list, the product details page, and the profile screen.',
                         learned: 'How to design a mobile app flow screen by screen, and how to keep a whole set of screens consistent in colour, spacing and components.',
@@ -1860,7 +1860,7 @@
                         imageName: 'images/bookly.webp',
                         image: 'images/bookly.webp',
                         phone: true,
-                        summary: 'A mobile app design for a bookstore, opening on a branded splash screen that invites the reader into their digital shelf.',
+                        summary: 'A mobile app design for a bookstore. I started with the splash screen, since that is the first thing you see when the app opens.',
                         tech: ['Figma', 'UI/UX', 'Mobile UI'],
                         link: 'https://www.figma.com/design/i0IkRvWO9Gpbq644PlJZsn/GARMINO?node-id=1-6',
                         kind: 'design',
@@ -2057,9 +2057,9 @@
 
                 
                 const goals = [
-                    'Build a strong career in IT and design through continuous learning and hands-on experience.',
-                    'Improve my skills in web development, UI/UX design, and software development.',
-                    'Create practical digital solutions that are useful, accessible, and visually appealing.'
+                    'Finish the degree, and sit the licensure exam properly instead of cramming the whole thing in the last month.',
+                    'Get good enough at UI/UX to land an internship where I can sit in on the user research too, not just hand over finished screens.',
+                    'Keep building small things. Everything on this page is schoolwork — I would like the next batch to be something I actually needed myself.'
                 ];
 
                 
@@ -2082,7 +2082,7 @@
 
                 
                 const contact = {
-                    text: 'I am currently open to internship opportunities, academic collaborations, and projects where I can improve my skills and contribute.'
+                    text: 'I am looking for an internship, ideally somewhere in UI/UX or frontend. If you are hiring a student who can design in Figma and then build it in code, I would like to hear from you.'
                 };
 
                 
@@ -2442,16 +2442,16 @@
                         return 'I have built a VeganBrew coffee shop website, an SHS enrollment system, the Bake Bliss bakery app, and the Komiks comic store website. You can open each one under Selected Projects.';
                     }
                     if (q.includes('contact') || q.includes('email') || q.includes('talk') || q.includes('hire')) {
-                        return 'You can contact me through the Let us Work Together section, or email me directly. I am open to internships and academic collaborations.';
+                        return 'The email link in the Contact section opens your own mail app with my address already filled in. I am mostly after an internship, so that is what I would answer fastest.';
                     }
                     if (q.includes('educat') || q.includes('study') || q.includes('school') || q.includes('background') || q.includes('about')) {
                         return 'I am a 3rd-year BS Information Technology student in the Philippines. I learn through school projects, personal projects, and self-learning.';
                     }
                     if (q.includes('design') || q.includes('ui') || q.includes('ux') || q.includes('figma')) {
-                        return 'I design interfaces in Figma and Canva, and I like turning those designs into working websites with clean, responsive layouts.';
+                        return 'Mostly Figma, sometimes Canva. What I enjoy most is when a screen I designed actually gets built — that is the part I want to do more of.';
                     }
                     if (q.includes('goal') || q.includes('future') || q.includes('career')) {
-                        return 'My goal is to build a strong career in IT and design through continuous learning and hands-on experience.';
+                        return 'Honestly I still have not picked one. I keep leaning towards UI/UX, but I do not want to drop the backend side yet. I would rather understand both ends than be good at only one.';
                     }
                     if (q.includes('hi') || q.includes('hello') || q.includes('hey')) {
                         return 'Hello! 👋 I am Shan Lee Garmino, a 3rd-year BSIT student. Feel free to ask about my skills, my projects, or my background.';
@@ -2459,7 +2459,7 @@
                     if (q.includes('thank')) {
                         return 'You are welcome! 😊 Good luck, and feel free to ask me anything else.';
                     }
-                    return 'Thanks for your message! I am still learning and improving every day. You can ask me about my skills, my projects, or my background.';
+                    return 'I do not have an answer for that one. Try asking about my skills, my projects, or where I studied — I made this bot myself, so it only knows what I told it.';
                 }
 
                 function scrollChatToBottom() {
